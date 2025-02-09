@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Self-Hosting" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/08_selfhost.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="Com todas as notícias sobre esta empresa violando a confiança e aquela empresa sendo invadida por hackers, alguns de nós podem sentir a necessidade de retomar algum controle de nossos dados mantendo-os em máquinas que operamos e/ou possuímos. Esta prática é chamada de self-hosting. Felizmente, aqueles que querem dar um mergulho profundo encontrarão muitas opções. Este capítulo explorará apenas algumas." property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="Com todas as notícias sobre esta empresa violando a confiança e aquela empresa sendo invadida por hackers, alguns de nós podem sentir a necessidade de retomar algum controle de nossos dados mantendo-os em máquinas que operamos e/ou possuímos. Esta prática é chamada de self-hosting. Felizmente, aqueles que querem dar um mergulho profundo encontrarão muitas opções. Este capítulo explorará apenas algumas." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Self-Hosting — Digital Superpowers 2.0 documentação</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = '08_selfhost';</script>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="09_conclusion.html" rel="next" title="Conclusion"/>
+<link href="07_robotics.html" rel="prev" title="Robotics and Hardware"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Ir para o conteúdo principal</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Voltar ao topo
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Digital Superpowers 2.0 documentação - Início" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Digital Superpowers 2.0 documentação - Início"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Ao Redor da Casa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">No Escritório</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Estúdio de Arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publicação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robótica e Hardware</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Self-Hosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusão</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossário</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Alternar barra lateral primária">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2F08_selfhost.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Abrir um problema">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Baixar esta página" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/08_selfhost.rst" target="_blank" title="Baixar arquivo fonte">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Imprimir para PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Modo de tela cheia">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/escuro" aria-label="claro/escuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Alternar barra lateral secundária">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Self-Hosting</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Conteúdo </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-your-own-server">Obtendo seu próprio servidor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#well-polished-self-hosted-catch-all">Solução completa e bem polida de self-hosting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-hosted-home-automation-and-security">Automação residencial e segurança self-hosted</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-own-vpn-server">Configurar seu próprio servidor VPN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-own-webserver">Seu próprio servidor web</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-your-own-contacts-and-calendar">Hospedando seus próprios contatos e calendário</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-cloud-for-documents-and-photos">Nuvem pessoal para documentos e fotos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-hosting-your-own-e-mail">Self-hosting de seu próprio e-mail</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="self-hosting">
+<h1>Self-Hosting<a class="headerlink" href="#self-hosting" title="Link para este cabeçalho">#</a></h1>
+<p>Com todas as notícias sobre esta empresa violando a confiança e aquela empresa sendo invadida por hackers, alguns de nós podem sentir a necessidade de retomar algum controle de nossos dados mantendo-os em máquinas que operamos e/ou possuímos. Esta prática é chamada de <em>self-hosting</em>. Felizmente, aqueles que querem dar um mergulho profundo encontrarão muitas opções. Este capítulo explorará apenas algumas.</p>
+<p>Este é um capítulo bônus destinado a leitores avançados que estão muito interessados nos elementos de hobby da computação ou que estão pensando em se tornar profissionais de TI e querem colocar a mão na massa.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Ao fazer self-hosting de seus dados, você pode evitar os olhos curiosos das empresas por aí, mas assume a responsabilidade total de proteger o que você hospeda. É um mundo em constante mudança lá fora. Novas ameaças surgem regularmente. Muitas vezes é mais seguro deixar a hospedagem de dados ou processos importantes para profissionais. Mas isso também é muito menos divertido e educativo.</p>
+</div>
+<section id="getting-your-own-server">
+<h2>Obtendo seu próprio servidor<a class="headerlink" href="#getting-your-own-server" title="Link para este cabeçalho">#</a></h2>
+<p>O primeiro passo em self-hosting é obter ou escolher seu servidor (ou servidores).</p>
+<p>Talvez a maneira mais fácil de fazer isso seja pagar a uma empresa de Servidor Virtual Privado (VPS). Elas criarão um novo servidor (virtual) em um de seus data centers e fornecerão credenciais de login. Você pode fazer login a partir do seu terminal e começar imediatamente. Empresas como <a class="reference external" href="https://www.digitalocean.com/">DigitalOcean</a> e <a class="reference external" href="https://www.linode.com/">Linode</a> colocam você em funcionamento em poucos minutos a partir de cerca de $5/mês. As grandes empresas (Amazon, Google, Microsoft) oferecem serviços semelhantes. Nesta opção, você ainda está confiando no host do VPS com seus dados, mas você é muito mais único, e há pelo menos um pouco de segurança na obscuridade. Esta é uma opção muito boa para experimentar em qualquer caso.</p>
+<p>Você poderia colocar um servidor em funcionamento em sua própria casa. Isso envolveria configurar um PC ou laptop antigo que você tem por aí como um servidor, comprar algo como um servidor de entrada Dell PowerEdge, ou montar um por conta própria escolhendo componentes e instalando-os em um gabinete. Esta opção não é ideal para hospedar coisas como páginas web e e-mail (seu endereço IP doméstico muda frequentemente, e muitos ISPs não permitem hospedagem), mas pode ser muito bom para coisas pessoais como armazenamento de arquivos, automação residencial, bloqueio de anúncios ou uma VPN.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/own_nas.jpg"><img alt="Uma foto de algumas peças de computador em caixas" src="_images/own_nas.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">É assim que parece comprar componentes de um computador (menos os discos rígidos) antes de montá-lo. Essas coisas se encaixam efetivamente, mas você deve pedir a ajuda de um amigo que já tenha feito algo semelhante antes, na primeira vez.</span><a class="headerlink" href="#id2" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Você também poderia comprar um servidor montável em rack e pagar a um data center para deixá-lo lá. Isso lhe dará energia, refrigeração e rede confiáveis, mas será bastante caro.</p>
+<p>O mais hardcore de tudo é construir seu próprio rack e obter uma conexão de internet empresarial do seu ISP que permita explicitamente hospedagem. Faça isso se quiser iniciar seu próprio data center ou algo assim.</p>
+<p>Depois de ter um servidor em funcionamento, você deve escolher quais serviços e programas executar nele e, em seguida, instalá-los/configurá-los.</p>
+</section>
+<section id="well-polished-self-hosted-catch-all">
+<h2>Solução completa e bem polida de self-hosting<a class="headerlink" href="#well-polished-self-hosted-catch-all" title="Link para este cabeçalho">#</a></h2>
+<p>Antes de mencionar as opções de self-hosting de baixo nível abaixo, você deve saber que <a class="reference external" href="https://nextcloud.com/">Nextcloud</a> é uma opção muito boa para começar com self-hosting. Ele pode ser executado no seu servidor e fornecerá sincronização de arquivos em nuvem pessoal (como o Dropbox), bem como calendário e contatos. A empresa por trás dele oferece suporte ao Nextcloud para empresas que desejam executá-lo em seus próprios servidores, mas qualquer pessoa pode executar uma cópia dele em seu próprio sistema, incluindo um Raspberry Pi. O Nextcloud foi derivado de seu agora concorrente, <a class="reference external" href="http://owncloud.com/">OwnCloud</a>, que oferece recursos semelhantes. Se você seguir esse caminho, encontrará os programas cliente no seu gerenciador de pacotes e poderá instalá-los facilmente para começar a sincronizar.</p>
+</section>
+<section id="self-hosted-home-automation-and-security">
+<span id="homeassistant"></span><h2>Automação residencial e segurança self-hosted<a class="headerlink" href="#self-hosted-home-automation-and-security" title="Link para este cabeçalho">#</a></h2>
+<p>Os computadores podem fazer coisas realmente maravilhosas em casa quando conectados a vários sensores e interruptores. A automação residencial é uma grande indústria com grandes players. Acho justo ser cético em colocar o controle e a vigilância de nossa própria casa nas mãos de outras pessoas. Além disso, se algum servidor no Texas cair por qualquer motivo, você não quer que sua casa pare de ser inteligente apenas porque depende totalmente da nuvem! Felizmente, o mundo do self-hosting para automação residencial é extremamente avançado, ativo e acolhedor.</p>
+<p><a class="reference external" href="https://www.home-assistant.io/">Home Assistant</a> é um incrível sistema de driver de automação residencial de código aberto que foi, em algum momento, um dos repositórios mais ativos no GitHub. Você pode instalá-lo em um computador em sua casa (até mesmo em um pequeno e barato Raspberry Pi) e fazer com que ele faça todo tipo de coisa. Todos os dados permanecem em casa. Aqui estão apenas alguns exemplos do que você pode configurá-lo para fazer:</p>
+<ul class="simple">
+<li><p>Ligar suas luzes em um determinado horário e tocar música agradável para ajudá-lo a acordar</p></li>
+<li><p>Ligar as luzes na sala de estar quando você entra</p></li>
+<li><p>Alertá-lo se vai chover muito hoje</p></li>
+<li><p>Aconselhá-lo sobre suas opções de deslocamento</p></li>
+<li><p>Tocar um <a class="reference external" href="https://www.allaboutbirds.org/guide/Common_Loon/sounds">chamado de Common Loon</a> no segundo em que o Sol se põe todos os dias</p></li>
+<li><p>Transformar sua fornalha burra em uma fornalha inteligente, aquecendo todas as manhãs antes de você acordar</p></li>
+<li><p>Armar um sistema de segurança quando todos os celulares dos membros da família se desconectarem da rede Wi-Fi (e também à noite, quando todos vão para a cama)</p></li>
+<li><p>Desarmar um sistema de segurança quando qualquer membro da família se reconectar ao Wi-Fi (para que você nunca precise digitar um código ou algo assim)</p></li>
+<li><p>Acionar um alarme que acende as luzes, toca uma sirene e envia fotos para você de câmeras quando uma porta é aberta ou movimento é detectado enquanto está armado (após um breve período de aviso)</p></li>
+<li><p>Controlar sua TV, estéreo e ar condicionado como desejar (por exemplo, resfriar quando você começar seu deslocamento em dias quentes)</p></li>
+<li><p>Lembrá-lo em certos dias de eventos em seu calendário ou quando é dia de lixo</p></li>
+<li><p>Fornecer ruídos suaves sempre que qualquer porta é aberta ou fechada quando você está em casa</p></li>
+<li><p>Configurar um susto ativado por movimento em uma TV para uma festa de Halloween</p></li>
+<li><p>Escurecer as luzes à noite e tocar alguns sons de grilos para criar uma atmosfera</p></li>
+<li><p>Lembrá-lo aleatoriamente de fazer flexões</p></li>
+<li><p>Monitorar o uso de energia da sua casa</p></li>
+<li><p>Desligar a luz do armário 20 minutos após ter sido ligada</p></li>
+<li><p>Ligar e desligar as luzes aleatoriamente quando você estiver fora para confundir possíveis ladrões</p></li>
+</ul>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/hassmontage.jpg"><img alt="Uma imagem de alguns gráficos de dados do Home Assistant" src="_images/hassmontage.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Algumas leituras de sensores do Home Assistant.</span><a class="headerlink" href="#id3" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Aqui estão algumas etapas para experimentar o Home Assistant:</p>
+<ul class="simple">
+<li><p>Obtenha um kit Raspberry Pi incluindo um cartão de memória, fonte de alimentação e caixa. Deve custar cerca de $50. Este é um computador Linux completo, mas pequeno e barato. Depois de configurá-lo, instale-o perto de um estéreo e conecte a saída de áudio do Pi a uma entrada de áudio do seu estéreo. Isso permitirá que ele o alerte de coisas audivelmente.</p></li>
+<li><p>Obtenha um dongle USB Z-Wave como o <strong>Aeotec Z-Stick Gen5, Z-Wave Plus USB</strong>. O Z-Wave é uma tecnologia sem fio não muito diferente do Wi-Fi, mas em uma frequência de rádio diferente. É projetado para redes mesh de baixa largura de banda, o que significa que um sinal pode alcançar o ponto de acesso principal retransmitindo de dispositivo para dispositivo se o ponto de acesso não estiver em alcance direto.</p></li>
+<li><p>Obtenha alguns sensores de porta, interruptores e sensores de movimento Z-Wave (conforme o orçamento permitir). Os interruptores mais fáceis de instalar são basicamente coisas que você conecta na parede e depois conecta sua lâmpada (ou o que for) em uma tomada que ela fornece.</p></li>
+<li><p>Instale o Home Assistant. Eu prefiro o método de instalação "Ambiente Virtual", embora a opção "docker" possa ser um pouco mais simples. Configure a configuração para Z-Wave.</p></li>
+</ul>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/sensor-montage.jpg"><img alt="Algumas fotos de hardware de casa inteligente" src="_images/sensor-montage.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Alguns bons sensores e interruptores Z-Wave. Os plugáveis são muito convenientes para adicionar capacidades inteligentes a coisas normais (como luzes de Natal), e os sensores de porta e movimento/temperatura/umidade alimentados por bateria duram muito mais do que se poderia esperar.</span><a class="headerlink" href="#id4" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>O Home Assistant usa arquivos de texto no formato <code class="docutils literal notranslate"><span class="pre">YAML</span></code> para configuração. A melhor maneira de pegar o jeito é olhar através de muitas das configurações de exemplo que as pessoas postaram online. Então, tente fazer sua própria automação. A melhor parte sobre a comunidade é que você pode perguntar, e eles realmente ajudarão a guiá-lo. Há até uma sala de bate-papo para ajuda. Aqui está uma que toca um pequeno beep toda vez que alguém abre uma porta:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">shell_command</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">door_chime</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">play -v 0.6 /pool/Systems/AptPi/Videos/beep.mp3</span>
+
+<span class="nt">automation</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Doorbell</span>
+<span class="w">      </span><span class="nt">trigger</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<span class="w">          </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary_sensor.sliding_door</span>
+<span class="w">          </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<span class="w">          </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<span class="w">          </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary_sensor.front_door</span>
+<span class="w">          </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<span class="w">          </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<span class="w">          </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary_sensor.garage_door</span>
+<span class="w">          </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<span class="w">          </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">platform</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">state</span>
+<span class="w">          </span><span class="nt">entity_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">binary_sensor.porch_door</span>
+<span class="w">          </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="s">'off'</span>
+<span class="w">          </span><span class="nt">to</span><span class="p">:</span><span class="w"> </span><span class="s">'on'</span>
+<span class="w">      </span><span class="nt">action</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">service</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">shell_command.door_chime</span>
+</pre></div>
+</div>
+<p>Esses arquivos de entrada de texto estruturado são mais um exemplo da utilidade de arquivos de texto puro.</p>
+</section>
+<section id="set-up-your-own-vpn-server">
+<span id="self-host-vpn"></span><h2>Configurar seu próprio servidor VPN<a class="headerlink" href="#set-up-your-own-vpn-server" title="Link para este cabeçalho">#</a></h2>
+<p>Você pode ter um local de trabalho que permite conectar-se à sua VPN para acessar a rede corporativa e acessar seus arquivos. Se você estiver disposto, pode realmente configurar um servidor VPN pessoal para si mesmo em sua casa usando um sistema VPN de código aberto chamado <a class="reference external" href="https://openvpn.net/">OpenVPN</a>. Você pode obter todos os benefícios de <a class="reference internal" href="03_home.html#vpn"><span class="std std-ref">Usando um Serviço VPN</span></a> gratuitamente, enquanto também acessa sua rede doméstica de onde quer que esteja, e de forma bastante segura! Quem você pode confiar para não espionar você melhor do que você mesmo <a class="footnote-reference brackets" href="#isp" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>? Pessoas que estão interessadas em câmeras de segurança, automação residencial e outras redes domésticas avançadas gostariam dessa opção "guerreiro da estrada". Você pode até instalar um servidor VPN em alguns dos roteadores Wi-Fi domésticos mais poderosos (alguns até vêm com capacidade de servidor VPN de fábrica!).</p>
+<p>Configurar um servidor VPN pode ser mais barato se você instalar um sistema de <em>firmware</em> de pós-venda no seu roteador doméstico. Isso não é particularmente fácil e pode danificar seu roteador se você fizer errado, então não posso recomendá-lo a menos que você tenha um backup para mexer, e esteja disposto a lutar um pouco enquanto lê fóruns sobre solução de problemas avançada. O firmware de roteador de destaque é chamado <a class="reference external" href="https://openwrt.org/docs/guide-quick-start/begin_here">OpenWrt</a>. Depois de instalá-lo em um roteador compatível, configurar a funcionalidade do servidor VPN requer algumas etapas:</p>
+<ul class="simple">
+<li><p>Gerar chaves criptográficas para o servidor e todos os clientes que você deseja conectar (todos os laptops, telefones, etc. que você possui, e talvez os de seus amigos também, se você quiser cobrar deles).</p></li>
+<li><p>Inserir as chaves do servidor e as configurações na configuração do roteador (através da interface web do roteador)</p></li>
+<li><p>Ajustar o firewall no roteador adequadamente</p></li>
+<li><p>Baixar e instalar clientes OpenVPN em todos os seus laptops e telefones (use o aplicativo chamado <em>OpenVPN Connect</em>)</p></li>
+<li><p>Copiar as chaves criptográficas do cliente para cada dispositivo e importá-las para o cliente</p></li>
+<li><p>Manter o controle do endereço IP público da sua casa, normalmente configurando algo chamado <em>DNS Dinâmico</em></p></li>
+</ul>
+<p>Os tutoriais sobre como fazer isso <a class="reference external" href="https://oldwiki.archive.openwrt.org/doc/howto/openvpn-streamlined-server-setup">são muito longos</a>, compatíveis com a complexidade desses sistemas. Embora aquele em particular seja um pouco mais longo do que precisa ser (sem uso da interface do usuário LuCI!?). Parece que a internet como um todo está carente de um ótimo tutorial de servidor OpenVPN no momento. Claro, você também pode instalar o OpenVPN em qualquer outro servidor, incluindo um VPS. Isso pode honestamente ser a melhor aposta para privacidade, mas você perderá o acesso aos seus dispositivos domésticos.</p>
+</section>
+<section id="your-own-webserver">
+<h2>Seu próprio servidor web<a class="headerlink" href="#your-own-webserver" title="Link para este cabeçalho">#</a></h2>
+<p>Como discutido em <a class="reference internal" href="05_publishing.html#publishing"><span class="std std-ref">Publicação</span></a>, colocar páginas web online requer espaço no servidor. Além de pagar alguém para configurar e executar os servidores para você, você também pode configurar e executar o seu próprio. Os sistemas <code class="docutils literal notranslate"><span class="pre">apache</span></code> e <code class="docutils literal notranslate"><span class="pre">nginx</span></code> estão entre os mais populares para servidores web. Se você acabar se aprofundando no self-hosting, é muito útil ter um desses sistemas operando, mesmo que você não tenha uma página web pública para hospedar. Como esses sistemas são a primeira linha de defesa para a maioria da internet contra atacantes, eles são feitos com a segurança em mente. Você pode esconder muitas das aplicações self-hosted discutidas aqui por trás desses esforços. Algo chamado <em>proxy reverso</em> é útil para isso, onde você executa sua aplicação self-hosted em seu servidor, mas apenas a expõe à internet pública através de um caminho especialmente guardado passando pelo <code class="docutils literal notranslate"><span class="pre">apache</span></code>.</p>
+<p>Embora muitas aplicações self-hosted venham com seu próprio sistema de servidor web, é um fato simples que, não importa qual seja, não é tão difundido quanto o <code class="docutils literal notranslate"><span class="pre">apache</span></code>. Assim, o <code class="docutils literal notranslate"><span class="pre">apache</span></code> teve mais olhos sobre ele, então quando vulnerabilidades são encontradas, ele é corrigido muito rapidamente.</p>
+</section>
+<section id="hosting-your-own-contacts-and-calendar">
+<h2>Hospedando seus próprios contatos e calendário<a class="headerlink" href="#hosting-your-own-contacts-and-calendar" title="Link para este cabeçalho">#</a></h2>
+<p>Um dos grandes avanços sociais evidentes quando se perde um telefone é que, quando você obtém um novo e faz login, seus contatos e calendário geralmente ainda estão lá. Isso ocorre porque eles estão "na nuvem" ou, como aprendemos anteriormente, "no servidor de alguém em algum lugar". Se você tiver seu próprio servidor, pode obter a mesma capacidade sem dar suas informações a mais ninguém.</p>
+<p>Os padrões da internet que regem a troca de informações de contato e calendário são chamados de CardDAV e CalDAV. A maioria dos aplicativos de calendário e contato em telefones ou computadores poderá interagir com qualquer servidor que fale esses idiomas. Um ótimo servidor CalDAV/CardDAV de código aberto é chamado <a class="reference external" href="https://radicale.org/">Radicale</a>. Ele é escrito em Python e pode ser executado em qualquer tipo de máquina.</p>
+<p>É quase trivial colocá-lo em funcionamento em casa de uma maneira que será acessível apenas a partir da sua rede doméstica. No entanto, é ainda melhor tê-lo em funcionamento na internet pública para que você possa atualizar seu calendário enquanto estiver longe de casa. Para fazer isso, é necessário configurar um servidor web e usar um proxy reverso, como mencionado acima. Os detalhes estão fora do escopo deste livro, mas eu encorajo você a investigar se isso é algo que você acha que está interessado. Pessoalmente, eu amo esse tipo de coisa.</p>
+</section>
+<section id="personal-cloud-for-documents-and-photos">
+<h2>Nuvem pessoal para documentos e fotos<a class="headerlink" href="#personal-cloud-for-documents-and-photos" title="Link para este cabeçalho">#</a></h2>
+<p>Como mencionado acima, o Nextcloud é a maneira mais fácil de começar com seu próprio sistema de sincronização de arquivos em nuvem.</p>
+<p>Para todos vocês, operadores avançados de servidores web, <a class="reference external" href="https://www.seafile.com">Seafile</a> é outra excelente opção. Ele tem clientes para telefone e desktop para todos os principais sistemas e pode fazer upload automático de fotos tiradas no seu telefone.</p>
+</section>
+<section id="self-hosting-your-own-e-mail">
+<h2>Self-hosting de seu próprio e-mail<a class="headerlink" href="#self-hosting-your-own-e-mail" title="Link para este cabeçalho">#</a></h2>
+<p>Ninguém recomenda mais o self-hosting de seu próprio e-mail. Na verdade, a maioria dos departamentos de TI corporativos nem quer hospedar e-mail; muitos deles estão migrando para serviços baseados em nuvem mantidos por algumas grandes empresas. No entanto, para aqueles de nós que realmente querem alcançar o emblema máximo de honra em self-hosting (e a incapacidade associada de fazer seus e-mails chegarem a muitas pessoas), saiba que isso é certamente possível. <code class="docutils literal notranslate"><span class="pre">Dovecot</span></code> e <code class="docutils literal notranslate"><span class="pre">postfix</span></code> são os componentes do servidor, e <code class="docutils literal notranslate"><span class="pre">spamassassin</span></code> com filtragem Bayesiana é surpreendentemente eficaz contra spam. Ao configurar seu servidor, envie um e-mail de teste para serviços como <a class="reference external" href="https://mail-tester.com">https://mail-tester.com</a>, que o analisará e produzirá um relatório informando sobre quaisquer problemas de configuração do servidor que você ainda precisa resolver. Uma vez que você obtenha uma pontuação de 10/10, você está pronto para ir.</p>
+<hr class="docutils"/>
+<p>Isso conclui este capítulo bônus. Espero que este breve tour inspire os bravos e curiosos entre vocês a investigar o fascinante mundo do self-hosting.</p>
+<p class="rubric">Notas de Rodapé</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="isp" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<p>Claro que seu ISP sempre pode espionar seus metadados. A menos que você use o
+último em segurança de rede: The Onion Router.</p>
+</aside>
+</aside>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="left-prev" href="07_robotics.html" title="página anterior">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">anterior</p>
+<p class="prev-next-title">Robótica e Hardware</p>
+</div>
+</a>
+<a class="right-next" href="09_conclusion.html" title="próxima página">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">próxima</p>
+<p class="prev-next-title">Conclusão</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Conteúdo
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-your-own-server">Obtendo seu próprio servidor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#well-polished-self-hosted-catch-all">Solução completa e bem polida de self-hosting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-hosted-home-automation-and-security">Automação residencial e segurança self-hosted</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-your-own-vpn-server">Configurar seu próprio servidor VPN</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-own-webserver">Seu próprio servidor web</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hosting-your-own-contacts-and-calendar">Hospedando seus próprios contatos e calendário</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personal-cloud-for-documents-and-photos">Nuvem pessoal para documentos e fotos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#self-hosting-your-own-e-mail">Self-hosting de seu próprio e-mail</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+Por Nick Touran
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2018-2024, Nicholas W. Touran.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

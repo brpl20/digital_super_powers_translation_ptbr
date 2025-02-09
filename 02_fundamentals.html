@@ -1,0 +1,904 @@
+```html
+<!DOCTYPE html>
+OK ALTERADO COISAS ESPECIFICAS EUA 
+
+<html data-content_root="./" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Fundamentos" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/02_fundamentals.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="Este capítulo começa com o básico e cobre algumas informações e melhores práticas que todos que usam computadores regularmente se beneficiarão ao saber. Construiremos mais superpoderes com base nesta fundação nos capítulos posteriores. Partes básicas dos computadores: Os computadores trazem, manipulam e apresentam..." property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="Este capítulo começa com o básico e cobre algumas informações e melhores práticas que todos que usam computadores regularmente se beneficiarão ao saber. Construiremos mais superpoderes com base nesta fundação nos capítulos posteriores. Partes básicas dos computadores: Os computadores trazem, manipulam e apresentam..." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Fundamentos — Documentação Digital Superpowers 2.0</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = '02_fundamentals';</script>
+<link href="genindex.html" rel="index" title="Índice"/>
+<link href="search.html" rel="search" title="Pesquisar"/>
+<link href="03_home.html" rel="next" title="Pela Casa"/>
+<link href="01_intro.html" rel="prev" title="Introdução"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Pular para o conteúdo principal</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Voltar ao topo
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Pesquisar..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Pesquisar..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Documentação Digital Superpowers 2.0 - Início" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Documentação Digital Superpowers 2.0 - Início"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introdução</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fundamentos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Pela Casa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">Pelo Escritório</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Estúdio de Arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publicação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robótica e Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Auto-Hospedagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusão</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossário</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Alternar barra lateral primária">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2F02_fundamentals.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Abrir um problema">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Baixar esta página" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/02_fundamentals.rst" target="_blank" title="Baixar arquivo de origem">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Imprimir para PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Modo de tela cheia">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/escuro" aria-label="claro/escuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Alternar barra lateral secundária">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Fundamentos</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Conteúdo </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-parts-of-computers">Partes básicas dos computadores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-systems">Sistemas operacionais</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-folders">Arquivos e pastas</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-attached-storage-nas">Armazenamento Anexado à Rede (NAS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-encryption">Criptografia de Arquivos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cloud">A Nuvem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line">A linha de comando</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programs-and-package-managers">Programas e gerenciadores de pacotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-managers">Gerenciadores de senhas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-secure-but-memorizable-passwords-with-diceware">Criando senhas seguras, mas memorizáveis com Diceware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-factor-authentication">Autenticação de dois fatores</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scams">Golpes comuns</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="fundamentals">
+<h1>Fundamentos<a class="headerlink" href="#fundamentals" title="Link para este cabeçalho">#</a></h1>
+<p>Este capítulo começa com o básico e cobre algumas informações e melhores práticas que
+todos que usam computadores regularmente se beneficiarão ao saber. Construiremos mais
+superpoderes com base nesta fundação nos capítulos posteriores.</p>
+<section id="basic-parts-of-computers">
+<h2>Partes básicas dos computadores<a class="headerlink" href="#basic-parts-of-computers" title="Link para este cabeçalho">#</a></h2>
+<p>Os computadores trazem, manipulam e apresentam dados com velocidade relâmpago e quase nenhuma
+parte móvel. É por isso que eles tiveram um impacto tão grande em nossas vidas e trouxeram
+a era da informação. Para um pouco de contexto, aqui estão os componentes-chave nos computadores
+que realizam toda essa maravilha:</p>
+<table class="table">
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Componente</p></th>
+<th class="head"><p>Propósito</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unidade Central de Processamento</p></td>
+<td><p>A CPU é o cérebro e faz a maior parte dos cálculos. Mais rápido é melhor, a velocidade
+é medida em bilhões de ciclos de computação por segundo (gigahertz).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Memória (RAM)</p></td>
+<td><p>A memória de trabalho de curto prazo e de ação rápida; ela mantém os dados enquanto a CPU os processa.
+Mais é melhor, medida em bilhões de octetos de uns e zeros (gigabytes).</p></td>
+</tr>
+<tr class="row-even"><td><p>Disco rígido</p></td>
+<td><p>A memória de longo prazo, mas mais lenta. Ela salva seus arquivos, fotos e planilhas.
+Também medida em gigabytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Monitor</p></td>
+<td><p>Exibe informações visualmente. Em telefones, também é um dispositivo de entrada. Medido no número
+de elementos de imagem horizontais e verticais (pixels).</p></td>
+</tr>
+<tr class="row-even"><td><p>Placa de rede</p></td>
+<td><p>Envia e recebe dados para/de outros computadores para postar fotos de gatos, etc. Medido em bilhões de uns e zeros comunicados por segundo (Gbps).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operating-systems">
+<span id="index-0"></span><h2>Sistemas operacionais<a class="headerlink" href="#operating-systems" title="Link para este cabeçalho">#</a></h2>
+<p>Quando um computador é ligado, uma série de operações simples embutidas são executadas para verificar o
+processador e a memória, e para descobrir qual outro hardware está conectado. Eventualmente,
+sistemas suficientes estão online para ler programas maiores e mais complexos do disco rígido. Em
+um sentido, o computador está se levantando por conta própria (daí o termo "inicialização").
+Neste ponto, o computador encontrará um Sistema Operacional (SO) no disco rígido,
+que dirá ao computador como executar programas do dia a dia, como um pacote de escritório ou um navegador
+da web e tudo mais.</p>
+<p>Existem muitos SOs por aí, mas vamos falar principalmente sobre três deles: Microsoft Windows, Apple macOS e Linux. Os dois primeiros são familiares para todos. O
+terceiro é um produto de código aberto (o que significa que está disponível para qualquer pessoa gratuitamente e que
+qualquer pessoa pode ver seu código-fonte subjacente) desenvolvido ao longo dos anos por uma comunidade de
+voluntários e profissionais. Linux é a tecnologia subjacente por trás do sistema operacional Android do Google
+e também executa muitos dos servidores que alimentam a internet. Nos últimos anos,
+mais pessoas começaram a usar Linux em seus laptops e desktops pessoais como uma
+alternativa poderosa, econômica, divertida e filosoficamente pura. Vamos nos esforçar para
+garantir que tudo discutido neste livro funcione bem em todos esses três SOs.</p>
+</section>
+<section id="files-and-folders">
+<span id="index-1"></span><h2>Arquivos e pastas<a class="headerlink" href="#files-and-folders" title="Link para este cabeçalho">#</a></h2>
+<p>Como você provavelmente sabe, a maioria dos sistemas de computadores armazena informações em uma estrutura hierárquica
+de pastas digitais aninhadas (também conhecidas como <em>diretórios</em>) no disco rígido. Você coloca suas fotos na
+pasta Fotos, e assim por diante. Você pode criar pastas e arquivos, excluí-los, renomeá-los,
+copiá-los, colá-los, etc.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se você não está familiarizado com copiar/colar, você está prestes a se divertir. É um superpoder
+central, mas você pode se beneficiar mais deste livro depois de aprender sobre isso. A página do <a class="reference external" href="https://www.wikihow.com/Copy-and-Paste">WikiHow</a>
+sobre isso é fantástica. Eu também ficaria um pouco preocupado que este livro seja ligeiramente
+avançado demais para você. Se você já conhece copiar/colar, mas não os atalhos de teclado
+(<code class="docutils literal notranslate"><span class="pre">Ctrl-C</span></code>, <code class="docutils literal notranslate"><span class="pre">Ctrl-V</span></code>), saiba que esses atalhos são muito rápidos.</p>
+</div>
+<p>Todos nós já perdemos arquivos em pastas antes. Muitos de nós já abrimos um documento de e-mail e
+trabalhamos nele o dia todo apenas para fechar o editor e nunca mais encontrar o arquivo. Isso
+geralmente acontece quando ele é salvo em alguma pasta temporária onde arquivos baixados da
+internet vão. Eu mesmo já fiz isso muitas vezes e atendi dezenas de chamadas de
+ajuda de amigos ao longo dos anos devido a isso. A solução é o botão <strong>Salvar como</strong>,
+que é distinto de <strong>Salvar</strong> no sentido de que permite escolher onde salvar um arquivo em vez de
+apenas salvá-lo de onde foi aberto. Clique nele, navegue para um local normal como
+<strong>Documentos</strong> e salve lá. Problema resolvido!</p>
+<p>Organizar pastas é uma batalha contínua para muitos de nós também. Tentamos dividir as coisas por
+tipo de arquivo (Fotos, Documentos, Música) e depois por ano. Às vezes, para projetos de vários anos,
+não vai bem e você pode precisar de uma pasta Projetos. É profundamente pessoal, então apenas
+explore o que funciona melhor para você. Para fotos, um método interessante é
+organizá-las por ano e depois nomear subpastas com o mês e então um número inteiro crescente e um evento, como <code class="docutils literal notranslate"><span class="pre">07.1</span> <span class="pre">Quatro</span> <span class="pre">de</span> <span class="pre">Julho</span></code> ou <code class="docutils literal notranslate"><span class="pre">12.4</span> <span class="pre">Natal</span> <span class="pre">da</span> <span class="pre">Yodit</span>
+<span class="pre">Suéter</span> <span class="pre">Festa</span></code>. Os designers de sistemas operacionais estão frequentemente tentando
+se afastar da estrutura hierárquica e usar tags (para que um arquivo possa ter várias
+tags, semelhante a estar em várias pastas ao mesmo tempo), mas ainda não chegamos lá.</p>
+<section id="backups">
+<span id="index-2"></span><span id="id1"></span><h3>Backups<a class="headerlink" href="#backups" title="Link para este cabeçalho">#</a></h3>
+<p>Backups são realmente importantes, e eu não conheço muitas pessoas que os levam muito
+a sério além dos profissionais de TI. Eu pessoalmente sou realmente obcecado com minha coleção de documentos,
+fotos e músicas e ficaria arrasado se os perdesse em um incêndio,
+roubo, falha de hardware, pulso eletromagnético, terremoto, vulcão e/ou guerra nuclear.
+Mas mesmo eu não sou ótimo com backups. As principais categorias de perda de dados a serem protegidas
+são:</p>
+<ul class="simple">
+<li><p>O hardware falha e os dados não podem ser recuperados</p></li>
+<li><p>O hardware é roubado ou hackeado e não pode ser recuperado</p></li>
+<li><p>O usuário (ou membro da família) exclui acidentalmente os dados</p></li>
+</ul>
+<p>Uma solução razoável e fácil para backups é <em>a nuvem</em>, que discutiremos em breve.</p>
+<p>Um método mais difícil de implementar, mas conceitualmente simples para dados de movimento lento
+é comprar dois discos rígidos USB externos com alguns terabytes de espaço. Copie todos os seus
+arquivos importantes para ambos. Leve um para o trabalho ou para a casa de um amigo ou algum outro
+local fora da sua casa. A cada mês ou seis meses ou sempre que (depende do seu ritmo de
+acumulação de novas coisas que você se importa), copie novos arquivos para eles e troque-os. Isso
+protegerá seus dados arquivais contra roubo e incêndio, mas não necessariamente contra terremotos
+ou EMPs. Para esses, você precisa de mais distância.</p>
+<p>Claro, há o desafio de descobrir quais arquivos estão desatualizados e ter a
+disciplina para atualizar regularmente os backups. Descobrir isso e sincronizar rapidamente é
+o trabalho dos milhares de produtos de software de backup que você ouvirá no mercado.
+Claro, você poderia simplesmente copiar tudo todos os dias, mas isso levaria muito tempo e
+desgastaria seus discos. A maioria dos sistemas operacionais modernos, como Windows, Linux e macOS, vem
+com utilitários de backup. Experimente-os ou procure produtos comerciais de terceiros.</p>
+<p>À medida que seus superpoderes digitais se desenvolvem, você se tornará conhecedor de alguns outros sistemas
+que o levarão a opções de backup extremamente elegantes. <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> é uma opção avançada
+digna de nota que se baseia na ferramenta <code class="docutils literal notranslate"><span class="pre">git</span></code> que você aprenderá em
+<a class="reference internal" href="06_programming.html#programming"><span class="std std-ref">Programação</span></a>. É bastante poderoso para manter backups bem organizados e
+seguros. Para usuários científicos, de engenharia e de dados, a ferramenta <code class="docutils literal notranslate"><span class="pre">datalad</span></code> constrói
+ainda mais sobre <code class="docutils literal notranslate"><span class="pre">git-annex</span></code> para adicionar reprodutibilidade em cima dos backups, para que seus resultados científicos
+possam ser perfeitamente replicados por qualquer pessoa no futuro. Em particular, <code class="docutils literal notranslate"><span class="pre">datalad</span></code>
+descobre automaticamente quaisquer arquivos de saída criados ao executar comandos específicos e rastreia o
+entrada, comandos e saída.</p>
+</section>
+<section id="network-attached-storage-nas">
+<span id="index-3"></span><h3>Armazenamento Anexado à Rede (NAS)<a class="headerlink" href="#network-attached-storage-nas" title="Link para este cabeçalho">#</a></h3>
+<p>Não é incomum hoje em dia ter um NAS em casa. Estes são computadores/aparelhos leves contendo grandes discos rígidos que você pode conectar aos seus computadores domésticos. Fotógrafos e videomakers profissionais todos têm esses. Eles oferecem alguns benefícios em termos de compartilhamento de arquivos entre os computadores da família e em termos de confiabilidade dos dados (eles são frequentemente resilientes contra uma única falha de um disco rígido). Você pode comprá-los por algumas centenas de dólares ou, se você gosta do hobby, pode transformar um computador antigo em um NAS. <a class="reference external" href="https://www.pcmag.com/article2/0,2817,2401086,00.asp">PC Magazine</a> (abençoe seus corações) faz uma revisão dos mais recentes e melhores NAS todos os anos, então confira para mais conselhos.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>NAS fornece algum nível de backup, mas eles não ajudam em caso de
+incêndios, roubos ou às vezes até exclusão acidental. Alguns produtos NAS vêm com software de backup bem polido que pode ajudar com seus backups fora do local.</p>
+</div>
+</section>
+<section id="file-encryption">
+<span id="fileencryption"></span><span id="index-4"></span><h3>Criptografia de Arquivos<a class="headerlink" href="#file-encryption" title="Link para este cabeçalho">#</a></h3>
+<p>Se o seu telefone ou laptop for perdido ou roubado com todo o seu trabalho e namoro online nele, sem
+problema, certo? Porque você tem um backup? Ótimo trabalho! Mas você ainda pode se preocupar porque
+há muitas coisas pessoais e confidenciais na maioria dos dispositivos. É
+sábio manter seus assuntos privados em segredo, não importa se eles são apenas
+as receitas da sua mãe. Você <em>TEM</em> algo a esconder!
+Se alguém tiver acesso ao seu e-mail, por exemplo, ele pode redefinir sua senha do banco
+e causar todo tipo de confusão. Então, vamos apenas esconder seus dados.</p>
+<p><em>Criptografia</em> é o processo de embaralhar os bits no seu disco rígido de tal forma que
+mesmo que alguém roube o computador/telefone, ele não será capaz de acessar as informações
+nele. Sem criptografia, um bandido ou adolescente aleatório poderia simplesmente conectar um cabo
+e ver todas as suas informações. Matemática para o resgate!</p>
+<p>Opções para criptografar seus discos rígidos em diferentes sistemas:</p>
+<table class="table">
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tipo de computador</p></th>
+<th class="head"><p>Opções de criptografia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p>Encontre o programa BitLocker e ative a criptografia de disco completo</p></td>
+</tr>
+<tr class="row-odd"><td><p>PC Linux</p></td>
+<td><p>Escolha criptografar todo o disco durante a instalação.</p></td>
+</tr>
+<tr class="row-even"><td><p>Mac</p></td>
+<td><p>Encontre o utilitário FileVault e configure-o para criptografar o disco completo</p></td>
+</tr>
+<tr class="row-odd"><td><p>Telefone Android</p></td>
+<td><p>Procure nas configurações por “Criptografia” e certifique-se de que está ativada. Se não estiver, ative. Certifique-se de definir um PIN forte ou outra credencial</p></td>
+</tr>
+<tr class="row-even"><td><p>iPhone</p></td>
+<td><p>Quase sempre criptografado por padrão; defina um PIN forte</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Se você criptografar algo e depois esquecer a senha, seus dados serão muito
+difíceis de recuperar (por design, afinal esse é o objetivo). Esperamos que você tenha
+um backup! Isso parece óbvio, mas é um pouco assustador. Apenas tenha cuidado.</p>
+</div>
+</section>
+<section id="the-cloud">
+<span id="index-5"></span><h3>A Nuvem<a class="headerlink" href="#the-cloud" title="Link para este cabeçalho">#</a></h3>
+<p>A Nuvem é um termo <em>nebuloso</em> que realmente significa “uma grande coleção semi-automatizada de quase
+computadores idênticos na internet que é operada por alguma empresa.” Muitos
+cálculos estão se movendo para A Nuvem por causa das eficiências de escala inerentes aos mega-operadores como
+Amazon Web Services. O acordo que A Nuvem oferece aos novos proprietários de negócios é que eles lidarão com
+o incômodo de adquirir, manter e atender os computadores, permitindo que você se concentre em
+software, marketing e usuários. Em outras palavras, você faz o que você faz. Se você se sair muito bem e precisar de 10.000
+novos computadores agora, eles clicam em um botão e (bloop-bleep) está feito. Se você errar e
+todos começarem a excluir suas contas no seu serviço, (bleep-bloop) esses computadores não estão mais
+reservados para você. Que acordo! Serviços como Netflix e Uber rodam em back-ends baseados em nuvem
+operados por outras empresas, como Amazon, Google ou Microsoft.</p>
+<p>O que isso significa <em>para você</em>? Muitos serviços oferecem a capacidade de sincronizar automaticamente arquivos no seu disco rígido com os discos rígidos deles na nuvem (via placa de rede). Isso é bom porque quando você tira uma foto no seu telefone, ela aparece no seu
+computador. Se você sofrer um tsunami, qualquer coisa que foi sincronizada na Nuvem
+longe sobreviverá e se sincronizará novamente quando você conseguir um novo computador.</p>
+<p>Serviços como Dropbox, OneDrive da Microsoft e iCloud da Apple fazem isso. Se você não estiver
+interessado em executar seu próprio servidor ou lidar com seus próprios backups, eu tenho que
+recomendar o uso desses serviços. O risco, como sempre, é que você tem que confiar neles,
+porque eles podem ver todos os seus arquivos. Além disso, com sistemas de computador sendo tão complexos, eles
+sempre têm alguma nova vulnerabilidade grave, então provavelmente é apenas uma questão de tempo até
+que esses serviços sejam violados. Nesse ponto, os maiores serviços serão o alvo mais provável.
+Por outro lado, eles provavelmente também têm as melhores defesas. Apenas algo para
+pensar.</p>
+<p>É a mesma história com e-mail. Se você usar um sistema de e-mail baseado na web na nuvem, pode
+simplesmente fazer login a partir do computador de qualquer pessoa e tê-lo.</p>
+</section>
+</section>
+<section id="the-command-line">
+<span id="commandline"></span><span id="index-6"></span><h2>A linha de comando<a class="headerlink" href="#the-command-line" title="Link para este cabeçalho">#</a></h2>
+<p>Vastos superpoderes de computador são controlados por uma janela um tanto obscura em seu computador:
+<em>A Linha de Comando</em> (ou <em>Terminal</em>). Vá para o seu computador e inicie-o. No Windows, clique em
+<strong>Iniciar</strong> e digite <code class="docutils literal notranslate"><span class="pre">cmd</span></code> e clique em <code class="docutils literal notranslate"><span class="pre">Linha</span> <span class="pre">de</span> <span class="pre">Comando</span></code> quando você o vir (ou apenas pressione
+enter). No macOS, vá para o Finder e clique em <code class="docutils literal notranslate"><span class="pre">Ir</span></code> → <code class="docutils literal notranslate"><span class="pre">Utilitários</span></code> → <code class="docutils literal notranslate"><span class="pre">Terminal</span></code>.
+No Linux, basta pressionar <code class="docutils literal notranslate"><span class="pre">Ctrl-Alt-T</span></code>. Uma pequena caixa aparecerá com um cursor piscando
+ameaçadoramente. Isso é tudo. Essa é a linha de comando. Você está espiando em um universo de
+possibilidades, como em <em>Homens de Preto</em> quando eles olham para o colar do gato e é uma
+galáxia inteira.</p>
+<p>A ideia aqui é que você digita comandos e ele responde fazendo algo.
+Esses comandos são precisos, expressivos e repetíveis; você pode dizer ao computador exatamente
+o que deseja e ele fará isso. Como você verá nos capítulos posteriores, isso pode ser
+significativamente mais rápido do que apontar e clicar, especialmente para ações repetidas. Em outras
+palavras, <em>um comando vale mil cliques</em>.</p>
+<p>Mais importante, centenas de superpoderes de grande impacto estão escondidos em pequenas e simples utilidades de linha de comando, a maioria das quais está disponível gratuitamente. O benefício do design elegante que levou à existência dessas ferramentas ricas é um de reducionismo: muitas operações complexas podem ser
+decompostas em uma série de operações simples. Por exemplo, considere um verificador ortográfico do
+ponto de vista de um desenvolvedor de software. Se ela escreve um processador de texto e precisa de verificação
+ortográfica, ela pode escrever um verificador ortográfico inteiro além do processador de texto,
+<em>OU</em> rezar para que alguém já tenha feito um verificador ortográfico antes e o tenha disponibilizado para ela
+usar. Como se vê, há de fato uma biblioteca de verificação ortográfica e utilitário
+disponível nesse sentido e ele tem uma interface de linha de comando. Milhares
+de tais blocos de construção existem, e todos eles estão disponíveis para você agora através da
+linha de comando.</p>
+<p>Há uma reputação de que a linha de comando é apenas para usuários "avançados". Eu não acho
+que isso seja verdade de forma alguma, e espero poder convencê-lo de que é acessível e útil para
+todos. Vamos usar a linha de comando com bastante frequência neste livro.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Quando você ler algo como "Digite isso" a partir de agora, e não estiver claro onde
+digitar, é muito provável que seja na linha de comando.</p>
+</div>
+<p>Vamos digitar alguns comandos para ver que é divertido e fácil.</p>
+<table class="table">
+<colgroup>
+<col style="width: 44.0%"/>
+<col style="width: 28.0%"/>
+<col style="width: 28.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operação</p></th>
+<th class="head"><p>Windows</p></th>
+<th class="head"><p>Linux/macOS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Em qual pasta estou?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pwd</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Quais arquivos existem nesta pasta?</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dir</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ls</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Mover para cima uma pasta na hierarquia</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Voltar para a pasta original, <code class="docutils literal notranslate"><span class="pre">[NOME]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[NOME]</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">[NOME]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Imprimir a hora e data atuais</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">/T</span></code> e/ou <code class="docutils literal notranslate"><span class="pre">time</span> <span class="pre">/T</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Imprimir o tempo de atividade do computador</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">net</span> <span class="pre">statistics</span> <span class="pre">server</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">uptime</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Criar uma pasta</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">fotos_de_gatos</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">fotos_de_gatos</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Remover uma pasta</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">fotos_de_gatos</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">rmdir</span> <span class="pre">fotos_de_gatos</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Converter unidades</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">"12</span> <span class="pre">cups"</span> <span class="pre">mL</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">units</span> <span class="pre">"12</span> <span class="pre">cups"</span> <span class="pre">mL</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fazer uma vaca dizer algo</p></td>
+<td><p>N/A :(</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cowsay</span> <span class="pre">"Oh</span> <span class="pre">man</span> <span class="pre">I</span> <span class="pre">love</span> <span class="pre">Linux"</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Aquele último não é uma piada.</p>
+<img alt="_images/cowsay.png" src="_images/cowsay.png"/>
+<p>Alguns comandos vêm com um SO e outros precisam ser instalados de terceiros. Os dois
+últimos exemplos acima são do último caso, e a instalação de <code class="docutils literal notranslate"><span class="pre">units</span></code> é discutida
+em <a class="reference internal" href="03_office.html#units"><span class="std std-ref">Conversão de unidades</span></a>, então você terá que esperar até lá para experimentar esse comando.</p>
+<p>Aqui estão alguns aprimoradores de produtividade na linha de comando:</p>
+<ul class="simple">
+<li><p>Se você quiser recuperar o comando anterior novamente (para executá-lo novamente ou modificá-lo
+levemente e depois executá-lo novamente), pressione a <em>seta para cima</em> no seu teclado. Cada vez que você
+pressiona, ele sobe em um histórico de todos os comandos que você executou. A <em>seta para baixo</em> vai
+na outra direção.</p></li>
+<li><p>Se você estiver digitando um comando, muitas vezes pode pressionar <code class="docutils literal notranslate"><span class="pre">TAB</span></code> para completá-lo automaticamente. Por
+exemplo, se houver uma pasta chamada <code class="docutils literal notranslate"><span class="pre">meu_nome_de_pasta_muito_longo</span></code>, você pode simplesmente digitar <code class="docutils literal notranslate"><span class="pre">cd</span>
+<span class="pre">meu_nome</span></code> e depois pressionar <code class="docutils literal notranslate"><span class="pre">TAB</span></code> e ele preencherá o restante. Isso é chamado de <em>completar
+com tabulação</em>. Eu fico muito incomodado e depois falo quando as pessoas não usam porque isso pode
+economizar horas por dia quando você está trabalhando intensamente na linha de comando.</p></li>
+<li><p>Você pode copiar e colar comandos na linha de comando.</p></li>
+<li><p>Pelo menos no Windows, você pode arrastar um arquivo para a linha de comando em vez de digitar seu
+caminho completo.</p></li>
+<li><p>Se você já digitou um comando que está demorando muito ou não é o que você queria, você pode
+abortá-lo pressionando e segurando a tecla <kbd class="kbd docutils literal notranslate">CTRL</kbd> e depois pressionando <kbd class="kbd docutils literal notranslate">C</kbd>.</p></li>
+</ul>
+</section>
+<section id="programs-and-package-managers">
+<span id="packagemanager"></span><span id="index-7"></span><h2>Programas e gerenciadores de pacotes<a class="headerlink" href="#programs-and-package-managers" title="Link para este cabeçalho">#</a></h2>
+<p>Seu computador sem dúvida veio com alguns programas, e você provavelmente baixou e
+instalou outros. Era uma grande dor sair e encontrar/instalar as últimas versões de
+vários programas e mantê-los atualizados. No mundo Linux, isso foi resolvido há anos
+com programas especiais chamados <em>Gerenciadores de pacotes</em>, que são comandos simples que
+sabem como encontrar, baixar, instalar, manter atualizados e (se desejado) desinstalar
+programas. macOS e Windows começaram a se atualizar e agora existem bons gerenciadores de
+pacotes para eles também. Sem mais delongas, é hora do seu próximo superpoder:
+gerenciamento de pacotes!</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Isso é opcional, mas tornará mais fácil seguir em
+seções do livro que dependem de programas especiais. Em todos os usos futuros, você pode
+alternativamente procurar o programa em questão, encontrar sua página na web, baixá-lo e executar
+seu instalador.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Esses programas mudam o que está no seu computador (esse é o ponto). É
+improvável, mas possível, que algo dê errado. Experimente-os em um computador que você
+possa se dar ao luxo de quebrar se estiver apenas aprendendo.</p>
+</div>
+<p>macOS tem um gerenciador de pacotes padrão chamado <a class="reference external" href="https://brew.sh/">Homebrew</a> que pode ser instalado
+a partir da linha de comando executando o seguinte comando (que também está na página
+deles se você quiser copiar/colar):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</pre></div>
+</div>
+<p>Um bom gerenciador de pacotes chamado <a class="reference external" href="https://chocolatey.org/install">Chocolatey</a> está disponível no Windows. Para obtê-lo, você deve
+abrir o Prompt de Comando com privilégios <em>Administrativos</em>, o que significa que os comandos que você digita podem
+alterar as configurações do sistema. Você geralmente faz isso digitando <code class="docutils literal notranslate"><span class="pre">cmd</span></code> no Menu Iniciar e
+clicando na opção que tem a palavra "Administrador" nela (ou clicando com o botão direito na
+opção normal do Prompt de Comando e escolhendo "Executar como Administrador"). Uma vez que você está dentro,
+copie/cole o comando mostrado em <a class="reference external" href="https://chocolatey.org/install">https://chocolatey.org/install</a> nele e pressione
+<kbd class="kbd docutils literal notranslate">Enter</kbd> para executá-lo (é simplesmente muito longo para razoavelmente colocar neste livro esperando que você
+o digite). Você pode ter que clicar com o botão direito e escolher <code class="docutils literal notranslate"><span class="pre">Colar</span></code> para colar, ou (no Windows)
+basta pressionar <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">V</kbd></kbd>.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/cmd.png"><img alt="Uma captura de tela da linha de comando no Windows 10" src="_images/cmd.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Abrindo a Linha de Comando do Administrador no Windows 10 (passe o mouse e
+clique com o botão direito, depois clique com o botão esquerdo na opção Administrador). Você geralmente tem que usar
+a opção Administrador toda vez que executar um comando <code class="docutils literal notranslate"><span class="pre">choco</span></code>.</span><a class="headerlink" href="#id4" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Agora você tem um gerenciador de pacotes e pode instalar programas comuns com comandos simples!
+Os comandos serão semelhantes ao que é mostrado abaixo. Forneceremos tabelas semelhantes
+frequentemente.</p>
+<table class="table" id="id5">
+<caption><span class="caption-text">Instalando programas com gerenciadores de pacotes</span><a class="headerlink" href="#id5" title="Link para esta tabela">#</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SO</p></th>
+<th class="head"><p>Comando</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">[nome_do_programa]</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">[nome_do_programa]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>macOS</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">--cask</span> <span class="pre">[nome_do_programa]</span></code> ou <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">[nome_do_programa]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Após emitir um comando como esses, pode haver alguns prompts e alertas que passam enquanto
+os pacotes são baixados e instalados. Em alguns casos, se as coisas parecerem congeladas, você pode
+ter que simplesmente pressionar <code class="docutils literal notranslate"><span class="pre">Enter</span></code> (tive que fazer isso no <code class="docutils literal notranslate"><span class="pre">choco</span></code> algumas vezes). Se você instalar um
+pacote grande, o processo pode levar alguns minutos, dependendo da velocidade da sua conexão com a internet.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>No Windows com <code class="docutils literal notranslate"><span class="pre">choco</span></code> você tem que executar <code class="docutils literal notranslate"><span class="pre">refreshenv</span></code> ou abrir um novo
+terminal de comando após instalar um programa antes que ele esteja disponível como um novo programa de linha de comando.</p>
+</div>
+<p>Você pode desinstalar qualquer coisa instalada por meio desses sistemas com a mesma facilidade
+executando o mesmo tipo de comando, mas com <code class="docutils literal notranslate"><span class="pre">uninstall</span></code> ou <code class="docutils literal notranslate"><span class="pre">remove</span></code> em vez de <code class="docutils literal notranslate"><span class="pre">install</span></code>. E você
+pode <code class="docutils literal notranslate"><span class="pre">update</span></code> também.</p>
+<p>A vida já está ficando mais fácil! Vamos colocar essa nova habilidade em prática.</p>
+</section>
+<section id="password-managers">
+<span id="index-8"></span><h2>Gerenciadores de senhas<a class="headerlink" href="#password-managers" title="Link para este cabeçalho">#</a></h2>
+<p>Você conhece aquela sensação quando está tentando comprar algo e a página da web
+<em>obriga</em> você a criar uma nova conta? Muitos de nós simplesmente reutilizamos a mesma senha antiga repetidamente, talvez com algumas modificações com base no nome do site. Isso acaba sendo realmente
+perigoso além de irritante porque a probabilidade de que a Pizzaria do Arnold tenha
+práticas de segurança sólidas é baixa, e depois de dar (aproximadamente) a mesma senha para
+um bilhão de tais estabelecimentos, a probabilidade de algum hacker nefasto invadir
+eles e obter sua senha se aproxima de 100%.</p>
+<p>Irritante <em>e</em> perigoso!? Esperamos que haja um superpoder para isso. De fato, existe:
+<strong>Gerenciadores de Senhas</strong>. Gerenciadores de senhas são programas que você executa no seu computador ou telefone
+que fazem duas coisas essenciais:</p>
+<ul class="simple">
+<li><p>Eles atuam como seu próprio cofre pessoal criptografado de senhas para que você possa consultá-las
+facilmente quando precisar</p></li>
+<li><p>Eles têm geradores de senhas aleatórias que criarão uma senha de 25 caracteres
+sempre que você precisar de uma nova para a Pizzaria do Arnold ou similar</p></li>
+</ul>
+<p>Se você usar uma senha única e aleatória para tudo, a ameaça discutida acima é
+neutralizada. Além disso, você não precisa digitar a senha nunca, os Gerenciadores de Senhas permitem que você
+a copie e depois a cole direto no formulário da web. Nesse fluxo de trabalho, você nunca realmente
+conhece a maioria das suas senhas.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Você ainda precisará memorizar algumas senhas-chave para contas muito importantes. Apenas
+mantenha-as únicas. Veja <a class="reference internal" href="#diceware"><span class="std std-ref">Criando senhas seguras, mas memorizáveis com Diceware</span></a> abaixo para maneiras de fazer isso bem.</p>
+</div>
+<p>Existem alguns ótimos gerenciadores de senhas de código aberto por aí, como <a class="reference external" href="https://keepassxc.org/">KeePassXC</a>, bem como
+ofertas comerciais (com melhor suporte), como <a class="reference external" href="https://www.lastpass.com/">LastPass</a> ou <a class="reference external" href="https://1password.com/">1Password</a>. Uma boa
+combinação é colocar seu banco de dados KeePassXC em um programa de sincronização na nuvem para que ele
+sincronize em todos os seus dispositivos.</p>
+<p>Para experimentar o KeePassXC com um gerenciador de pacotes (veja acima), execute o seguinte na Linha
+de Comando:</p>
+<table class="table" id="id6">
+<caption><span class="caption-text">Instalando KeePassXC com seu gerenciador de pacotes</span><a class="headerlink" href="#id6" title="Link para esta tabela">#</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SO</p></th>
+<th class="head"><p>Comando</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">keepassxc</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">keepassxc</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>macOS</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">--cask</span> <span class="pre">keepassxc</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Você também pode querer armazenar cartões de crédito no seu gerenciador de senhas, tornando muito fácil
+copiá-los/colá-los em formulários da web ao fazer compras.</p>
+<p>Claro que há uma nova ameaça agora: se alguém descobrir a única senha que você usa para
+seu gerenciador de senhas e tiver acesso aos seus arquivos, ele pode obter todas as suas senhas de uma vez. Isso é menos provável de acontecer, mas você deve considerar isso ao digitar sua senha mestre
+no gerenciador de senhas. Lembre-se de que Edward Snowden coloca um cobertor sobre
+sua cabeça sempre que digita uma senha, e ele é alguém que sabe o
+que está acontecendo por aí.</p>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Sua senha no trabalho expira automaticamente a cada poucos meses? As empresas costumavam pensar que isso
+era bom para a segurança, mas em 2016, o NIST lançou diretrizes dizendo que a expiração
+automática desnecessária estava levando as pessoas a escolher senhas fracas. Agora eles recomendam apenas
+forçar alguém a mudar uma senha se houver evidências de uma violação de dados. O mesmo
+com a complexidade da senha (não é mais sábio exigir misturas de maiúsculas e
+símbolos), basta fazer uma senha longa e verificá-la contra uma lista de senhas comuns.</p>
+</div>
+</section>
+<section id="making-secure-but-memorizable-passwords-with-diceware">
+<span id="diceware"></span><span id="index-9"></span><h2>Criando senhas seguras, mas memorizáveis com Diceware<a class="headerlink" href="#making-secure-but-memorizable-passwords-with-diceware" title="Link para este cabeçalho">#</a></h2>
+<p>Para as poucas senhas muito fortes que você precisa memorizar, o método Diceware está aqui para
+ajudar. Aqui estão os passos:</p>
+<ul>
+<li><p>Obtenha uma lista de palavras Diceware como <a class="reference external" href="https://www.eff.org/deeplinks/2016/07/new-wordlists-random-passphrases">uma destas</a> da
+<a class="reference internal" href="glossary.html#term-EFF"><span class="xref std std-term">EFF</span></a>.
+Estas têm 5 dígitos entre 1 e 6 (para cada valor possível de um dado). Aqui está um
+trecho:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>46663   reflexo
+46664   refluxo
+46665   refocar
+46666   dobrar
+51111   reflorestar
+51112   reformatar
+51113   reformado
+51114   reformador
+</pre></div>
+</div>
+</li>
+<li><p>Consiga 5 dados e role-os. Alinhe-os e depois procure a palavra que corresponde aos
+valores que você rolou (se você teve 4, 6, 6, 6, 4, sua primeira palavra seria <code class="docutils literal notranslate"><span class="pre">refluxo</span></code>, da
+lista acima).</p></li>
+<li><p>Role de 4 a 7 vezes mais. Agora você tem de 5 a 8 palavras aleatórias. Junte-as e essa é
+sua senha supersegura, mas ainda memorizável.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Não tem 5 dados por aí? Você pode encontrar geradores online de senhas diceware. Apenas saiba que eles não são aleatórios o suficiente e o método Diceware recomenda
+não usar nada além de dados reais. Além disso, todos deveriam ter alguns dados por aí
+para jogar 10.000 <a class="footnote-reference brackets" href="#tenthousand" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p>
+</div>
+</section>
+<section id="two-factor-authentication">
+<h2>Autenticação de dois fatores<a class="headerlink" href="#two-factor-authentication" title="Link para este cabeçalho">#</a></h2>
+<p>Autenticação de dois fatores (2FA) é um método de login oferecido por muitas páginas da web e
+instituições hoje em dia. Isso faz com que você tenha que digitar uma senha <em>e também</em> digitar um
+código único enviado para o seu telefone via texto ou através de um aplicativo especial. A ideia aqui é
+combinar algo que você sabe (sua senha) com algo que você tem (seu telefone). É
+semelhante a digitar seu código postal na bomba de gasolina ao usar um cartão de crédito <a class="footnote-reference brackets" href="#gaspump" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, ou um
+PIN com um cartão de ATM. Para suas contas mais importantes, é realmente essencial ativá-lo
+para minimizar a probabilidade de alguém acessá-las. Bancos, grandes sites de compras e
+provedores de e-mail são bons primeiros lugares para começar. Você pode aprender como ativá-lo com uma
+pesquisa na web do tipo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>ativar [nome da página da web] autenticação de dois fatores
+</pre></div>
+</div>
+<p>Os novos riscos aqui são que leva mais tempo para fazer login e, se você perder seu telefone, é extra difícil
+apenas redefinir sua senha. Esses são os trade-offs. Muitas empresas estão relaxando a dor
+exigindo que você use o código 2FA apenas em novos computadores, então não é tão ruim.
+Outras empresas fazem você obter e inserir um token 2FA duas vezes por transação, o que é
+realmente irritante.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Receber tokens 2FA por mensagens de texto é provavelmente melhor do que nada, mas
+é significativamente menos seguro do que usar um aplicativo 2FA dedicado. Por quê? Porque é possível
+para um bandido usar engenharia social para convencer seu operador de telefone a mudar seu
+número de telefone para um cartão SIM diferente, permitindo assim que eles acessem seus tokens 2FA e
+entrem em suas contas. Isso aconteceu em ataques sérios, como <a class="reference external" href="https://blog.cloudflare.com/the-four-critical-security-flaws-that-resulte/">um na CloudFlare
+em 2012</a>.
+É muito mais difícil para eles acessarem um aplicativo no seu telefone.</p>
+</div>
+</section>
+<section id="common-scams">
+<span id="index-10"></span><h2>Golpes comuns<a class="headerlink" href="#common-scams" title="Link para este cabeçalho">#</a></h2>
+<p>Bilhões de dólares são perdidos a cada ano devido a fraudes, muitas das quais ocorrem em computadores.
+Você deve sempre ser um pouco cético se alguém que você não conhece pedir para
+pagar por algo ou dar acesso. Aqui estão algumas diretrizes para evitar fraudes.</p>
+<ul>
+<li><p><strong>Nunca dê sua senha</strong></p>
+<p>Nenhuma entidade bem-intencionada jamais pedirá sua senha por telefone ou e-mail ou
+em qualquer outro lugar que não seja um formulário de login. Se isso acontecer com você,
+você deve reconhecer isso como um grande sinal de alerta.</p>
+</li>
+<li><p><strong>Grandes emperesas de computador nunca ligarão para você</strong></p>
+<p>Existem muitos golpes onde as pessoas fingem estar ligando de uma grande empresa que você já ouviu falar, oferecendo-se para consertar algo no seu computador se você apenas acessar um certo link.
+Esta é uma tentativa de acessar seu PC para encontrar informações bancárias sobre você. Desligue!</p>
+</li>
+<li><p><strong>E-mails onde as pessoas sabem uma senha antiga sua não têm um vídeo comprometedor seu</strong></p>
+<p>Ao longo dos anos, várias empresas sofreram violações de dados. Se você tinha uma
+conta com qualquer uma delas com uma senha fraca (ou seja, uma única palavra do dicionário), elas podem
+enviar um e-mail dizendo que sabem sua senha e afirmar que invadiram seu computador
+e gravaram você fazendo algo nu ou privado. Eles ameaçam enviar para todos
+seus amigos se você não enviar cerca de R$ 1000,00 via Bitcoin. É muito improvável que eles
+tenham algo sobre você, já que essas violações estão amplamente disponíveis. Se você usou essa mesma
+senha em outras contas, você precisa mudá-la, tipo, ontem. Veja
+<a class="reference external" href="https://haveibeenpwned.com/">https://haveibeenpwned.com/</a> para ajuda em verificar quais contas suas foram
+comprometidas em violações conhecidas.</p>
+</li>
+<li><p><strong>Se alguém disser que você está com um grande problema eles podem ajudar, provavelmente é um golpe</strong></p>
+<p>Você pode receber uma ligação dizendo que tem dezenas de violações não pagas na sua cudade, mas se você for até a um posto e conseguir R$ 200,00 em créditos de celular e lê-los um após o outro para essa pessoa no telefone, eles vão te tirar disso. Isso é um
+golpe. Creditos de celular são muito difíceis de rastrear e são um instrumento favorito dos golpistas. Se
+você estiver realmente em apuros, lide com isso pelos canais adequados e contrate um advogado.
+Isso acontece com pessoas se passando por auditores da Receita Federal também. Eles podem saber um pouco sobre
+você, como onde você mora e alguns endereços anteriores. Tudo isso é registro público, mas
+torna o golpe mais real. Não caia nessa. Se você estiver realmente inseguro, peça o número
+da instituição deles, verifique online e depois ligue de volta.</p>
+</li>
+
+<li><p><strong>Cuidado com phishing - pescaria</strong></p>
+  <p>Phishers enviarão um e-mail que parece ser de uma instituição familiar. Ele terá os logotipos corretos, o endereço certo e um link que você pode clicar para fazer algo importante, como redefinir uma senha ou confirmar algo. A melhor defesa aqui é passar o mouse sobre o link e verificar na barra de endereços (geralmente na parte inferior da tela) para ver para onde o link está realmente indo. Se for para algum endereço estranho na internet ou um erro de ortografia do site real, é um golpe. Se você clicar no link, também pode verificar a barra de endereços do navegador. Tenha cuidado, eles podem ser muito traiçoeiros. Isso tem sido um problema tão grande que seu empregador pode contratar alguém para enviar mensagens semelhantes a phishing para você e, se você clicar nelas, terá que fazer um treinamento obrigatório. É como um phishing anti-phishing.</p>
+  </li>
+  <li><p><strong>Ransomware é real</strong></p>
+  <p>Se você receber uma mensagem de que todos os seus arquivos estão criptografados e você precisa pagar para obtê-los descriptografados, pode ser real; especialmente se você não conseguir acessar seus arquivos. Idealmente, você terá um backup de seus arquivos e poderá simplesmente limpar seu computador e restaurar o backup. Caso contrário, você terá que escolher se quer dar ao criminoso o que ele quer ou se despedir de seus arquivos. Outro bom motivo para ter backups!</p>
+  </li>
+  </ul>
+  <p>Esses são apenas alguns. O FBI tem centenas mais para ficar de olho em <a class="reference external" href="https://www.fbi.gov/scams-and-safety/common-fraud-schemes">https://www.fbi.gov/scams-and-safety/common-fraud-schemes</a>.</p>
+  <hr class="docutils"/>
+  <p>Bem, isso resume o capítulo um. Espero que você tenha aprendido algo novo e útil.</p>
+  <p class="rubric">Notas de rodapé</p>
+  <aside class="footnote-list brackets">
+  <aside class="footnote brackets" id="tenthousand" role="doc-footnote">
+  <span class="label"><span class="fn-bracket">[</span><a href="#id2" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+  <p>Um jogo de dados surpreendentemente divertido, semelhante ao Farkle. Experimente, você não vai se arrepender: <a class="reference external" href="https://en.wikipedia.org/wiki/Dice_10000">https://en.wikipedia.org/wiki/Dice_10000</a></p>
+  </aside>
+  <aside class="footnote brackets" id="gaspump" role="doc-footnote">
+  <span class="label"><span class="fn-bracket">[</span><a href="#id3" role="doc-backlink">2</a><span class="fn-bracket">]</span></span>
+  <p>Nos EUA, códigos CEP são usados para autenticação de cartão de crédito em muitos postos de gasolina self-service porque os cartões em si não têm PINs como na maior parte do mundo.</p>
+  </aside>
+  </aside>
+  </section>
+  </section>
+  </article>
+  <footer class="prev-next-footer">
+  <div class="prev-next-area">
+  <a class="left-prev" href="01_intro.html" title="previous page">
+  <i class="fa-solid fa-angle-left"></i>
+  <div class="prev-next-info">
+  <p class="prev-next-subtitle">previous</p>
+  <p class="prev-next-title">Introduction</p>
+  </div>
+  </a>
+  <a class="right-next" href="03_home.html" title="next page">
+  <div class="prev-next-info">
+  <p class="prev-next-subtitle">next</p>
+  <p class="prev-next-title">Around the House</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+  </div>
+  </footer>
+  </div>
+  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+  <i class="fa-solid fa-list"></i> Contents
+    </div>
+  <nav class="bd-toc-nav page-toc">
+  <ul class="visible nav section-nav flex-column">
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-parts-of-computers">Basic parts of computers</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operating-systems">Operating systems</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-and-folders">Files and folders</a><ul class="nav section-nav flex-column">
+  <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a></li>
+  <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-attached-storage-nas">Network Attached Storage (NAS)</a></li>
+  <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#file-encryption">File Encryption</a></li>
+  <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-cloud">The Cloud</a></li>
+  </ul>
+  </li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-command-line">The command line</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programs-and-package-managers">Programs and package managers</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#password-managers">Password managers</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-secure-but-memorizable-passwords-with-diceware">Making secure but memorizable passwords with Diceware</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#two-factor-authentication">Two-factor authentication</a></li>
+  <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-scams">Common scams</a></li>
+  </ul>
+  </nav></div>
+  </div></div>
+  </div>
+  <footer class="bd-footer-content">
+  <div class="bd-footer-content__inner container">
+  <div class="footer-item">
+  <p class="component-author">
+  By Nick Touran
+  </p>
+  </div>
+  <div class="footer-item">
+  <p class="copyright">
+      
+        © Copyright 2018-2024, Nicholas W. Touran.
+        <br/>
+  </p>
+  </div>
+  <div class="footer-item">
+  </div>
+  <div class="footer-item">
+  </div>
+  </div>
+  </footer>
+  </main>
+  </div>
+  </div>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/pydata-sphinx-theme.js"></script>
+  <footer class="bd-footer">
+  </footer>
+  </body>
+  </html>
+

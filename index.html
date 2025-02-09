@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="en-us">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Digital Superpowers" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/index.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="A whirlwind tour of practices and advanced tools that turbocharge productivity, ignite creativity, and empower learning" property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="Introduction- Intended audience, About me, Philosophy., Fundamentals- Basic parts of computers, Operating systems, Files and folders, The command line, Programs and package managers, Password managers, Making secure but memorizable passwords with Diceware, Two-factor authentication, Common scams...." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Digital Superpowers — Digital Superpowers 2.0 documentation</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="01_intro.html" rel="next" title="Introduction"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Skip to main content</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Digital Superpowers 2.0 documentation - Home" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Digital Superpowers 2.0 documentation - Home"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Around the House</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">Around the Office</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Art Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publishing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robotics and Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Self-Hosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusion</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2Findex.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/index.rst" target="_blank" title="Download source file">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Print to PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Digital Superpowers</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="digital-superpowers">
+<h1>Digital Superpowers<a class="headerlink" href="#digital-superpowers" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_intro.html#intended-audience">Intended audience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_intro.html#about-me">About me</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_intro.html#philosophy">Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#basic-parts-of-computers">Basic parts of computers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#operating-systems">Operating systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#files-and-folders">Files and folders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#the-command-line">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#programs-and-package-managers">Programs and package managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#password-managers">Password managers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#making-secure-but-memorizable-passwords-with-diceware">Making secure but memorizable passwords with Diceware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#two-factor-authentication">Two-factor authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_fundamentals.html#common-scams">Common scams</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Around the House</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#life-changing-keyboard-shortcuts">Life-changing keyboard shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#avoiding-printer-dry-out">Avoiding printer dry-out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#get-to-know-your-router">Get to know your router</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#setting-a-strong-wi-fi-password">Setting a strong Wi-Fi password</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#guest-networks">Guest networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#avoiding-dns-hijack">Avoiding DNS hijack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#opening-ports">Opening ports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#virtual-machines">Virtual machines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#ad-blockers">Ad-blockers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#using-a-vpn-service">Using a VPN Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#the-onion-router-and-the-dark-web">The Onion Router and the dark web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_home.html#planning-a-night-of-star-gazing">Planning a night of star-gazing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">Around the Office</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#note-on-office-suites">Note on office suites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#concentrating-in-offices">Concentrating in offices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#note-taking">Note Taking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#screenshots">Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#text-editors-and-extensions">Text editors and extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#column-editing">Column editing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#slicing-and-dicing-pdfs">Slicing and dicing PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#ultimate-find-and-replace-regular-expressions">Ultimate find and replace (<em>regular expressions</em>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#encrypted-communications">Encrypted communications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#making-flowcharts">Making flowcharts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_office.html#the-gnu-utilities">The GNU utilities</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Art Studio</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#basic-image-manipulation">Basic image manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#computer-graphics">Computer graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#the-digital-darkroom">The digital darkroom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#making-podcasts-music-and-sound-effects">Making podcasts, music, and sound effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#djing-a-party-or-show">DJing a party or show</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#movies">Movies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_art.html#making-games">Making games</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publishing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_publishing.html#publishing-online">Publishing online</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_publishing.html#publishing-pdfs">Publishing PDFs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_publishing.html#publishing-ebooks-and-books">Publishing eBooks (and books)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#tracking-changes-of-anything">Tracking changes of anything</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#why-program">Why program?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#programming-languages">Programming languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#writing-python-programs">Writing Python programs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#the-bridge-to-machine-learning">The bridge to machine learning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#graphical-user-interfaces">Graphical User Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_programming.html#web-applications">Web applications</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robotics and Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#the-era-of-cheap-user-friendly-microcontrollers">The era of cheap, user-friendly microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#some-basic-peripherals">Some basic peripherals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#an-interactive-art-installation">An interactive art installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#even-cheaper-microcontrollers">Even cheaper microcontrollers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#a-star-tracking-camera-mount-for-astrophotography">A star-tracking camera mount for astrophotography</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_robotics.html#controlling-hardware-directly-from-your-laptop">Controlling hardware directly from your laptop</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Self-Hosting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#getting-your-own-server">Getting your own server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#well-polished-self-hosted-catch-all">Well-polished self-hosted catch-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#self-hosted-home-automation-and-security">Self-hosted home automation and security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#set-up-your-own-vpn-server">Set up your own VPN Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#your-own-webserver">Your own webserver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#hosting-your-own-contacts-and-calendar">Hosting your own contacts and calendar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#personal-cloud-for-documents-and-photos">Personal cloud for documents and photos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_selfhost.html#self-hosting-your-own-e-mail">Self-hosting your own e-mail</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusion</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</div>
+</section>
+</article>
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="right-next" href="01_intro.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Introduction</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Nick Touran
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2018-2024, Nicholas W. Touran.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Robótica e Hardware" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/07_robotics.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="Até agora, lidamos exclusivamente com software. Novos campos fascinantes de capacidades podem ser alcançados olhando também para o hardware. O hardware pode interagir fisicamente conosco e com nosso ambiente. E que momento para estar vivo no reino do hardware! Claro, para começar a interagir com o mundo físico..." property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="Até agora, lidamos exclusivamente com software. Novos campos fascinantes de capacidades podem ser alcançados olhando também para o hardware. O hardware pode interagir fisicamente conosco e com nosso ambiente. E que momento para estar vivo no reino do hardware! Claro, para começar a interagir com o mundo físico..." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Robótica e Hardware — Documentação do Digital Superpowers 2.0</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = '07_robotics';</script>
+<link href="genindex.html" rel="index" title="Índice"/>
+<link href="search.html" rel="search" title="Buscar"/>
+<link href="08_selfhost.html" rel="next" title="Hospedagem Própria"/>
+<link href="06_programming.html" rel="prev" title="Programação"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Pular para o conteúdo principal</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Voltar ao topo
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Buscar..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Buscar..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Documentação do Digital Superpowers 2.0 - Início" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Documentação do Digital Superpowers 2.0 - Início"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Buscar" aria-label="Buscar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Buscar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Principal" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Ao Redor da Casa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">No Escritório</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Estúdio de Arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publicação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programação</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Robótica e Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Hospedagem Própria</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusão</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossário</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Alternar barra lateral primária">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2F07_robotics.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Abrir um problema">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Baixar esta página" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/07_robotics.rst" target="_blank" title="Baixar arquivo fonte">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Imprimir para PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Modo de tela cheia">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/escuro" aria-label="claro/escuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Buscar" aria-label="Buscar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Alternar barra lateral secundária">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Robótica e Hardware</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Conteúdo </h2>
+</div>
+<nav aria-label="Página">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-era-of-cheap-user-friendly-microcontrollers">A era dos microcontroladores baratos e fáceis de usar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-basic-peripherals">Alguns periféricos básicos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-interactive-art-installation">Uma instalação de arte interativa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-cheaper-microcontrollers">Microcontroladores ainda mais baratos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-star-tracking-camera-mount-for-astrophotography">Um suporte de câmera rastreador de estrelas para astrofotografia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-hardware-directly-from-your-laptop">Controlando hardware diretamente do seu laptop</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="robotics-and-hardware">
+<h1>Robótica e Hardware<a class="headerlink" href="#robotics-and-hardware" title="Link para este cabeçalho">#</a></h1>
+<p>Até agora, lidamos exclusivamente com software. Novos campos fascinantes de capacidades podem ser alcançados olhando também para o hardware. O hardware pode interagir <em>fisicamente</em> conosco e com nosso ambiente. E que momento para estar vivo no reino do hardware! Claro, para começar a interagir com o mundo físico, é melhor começar com algum hardware fácil de usar. A exploração do hardware neste capítulo se baseia nas habilidades introduzidas em <a class="reference internal" href="06_programming.html#programming"><span class="std std-ref">Programação</span></a>, já que é necessário algum conhecimento de codificação. Felizmente, experiência de programação completamente iniciante é mais do que suficiente para começar a jornada. Na verdade, projetos de hardware muitas vezes proporcionam uma motivação emocionante para expandir suas habilidades de programação.</p>
+<p>Os smartphones têm um número impressionante de sensores de hardware e dispositivos de entrada, mas infelizmente não há um sistema que eu conheça que forneça acesso básico aos dados, além do sistema Unity3D discutido em <a class="reference internal" href="04_art.html#games"><span class="std std-ref">Fazendo jogos</span></a>. Assim, para experimentar alguns superpoderes relacionados ao hardware, pode ser necessário comprar alguns sistemas de hardware (relativamente baratos). Este capítulo é, portanto, apenas explicativo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Eletricidade é perigosa e pode matar você e/ou danificar propriedades. Fazer um curso de eletrônica é uma boa maneira de começar com os tipos de projetos discutidos neste capítulo, se você se sentir inspirado a fazê-lo.</p>
+</div>
+<section id="the-era-of-cheap-user-friendly-microcontrollers">
+<span id="index-0"></span><h2>A era dos microcontroladores baratos e fáceis de usar<a class="headerlink" href="#the-era-of-cheap-user-friendly-microcontrollers" title="Link para este cabeçalho">#</a></h2>
+<p>Desde o início dos anos 2000, o mercado foi inundado com placas de circuito contendo uma CPU de baixa potência, alguma memória, portas de entrada/saída digitais e analógicas (para interagir com o mundo externo) e capacidades de rede. Basicamente, são mini-computadores que você pode programar com seu computador normal e depois desconectar para colocar em um robô, no seu jardim, em uma instalação de arte, e assim por diante.</p>
+<p>Um desses produtos é o <a class="reference external" href="https://www.arduino.cc/">Arduino</a>, um microcontrolador de código aberto (o design de hardware é aberto, assim como o software) que realmente iniciou a revolução dos microcontroladores baratos. Para usar, você conecta vários sensores, botões, luzes ou outros circuitos a ele e, em seguida, escreve um pequeno programa (chamado de <em>sketch</em>) no computador. Você transfere o programa via porta USB para o Arduino, onde ele é armazenado na placa e começa a ser executado. Esses sketches são geralmente escritos na linguagem de programação <code class="docutils literal notranslate"><span class="pre">C</span></code>, que é de nível mais baixo que Python (<code class="docutils literal notranslate"><span class="pre">C</span></code> é mais poderosa e rápida, mas mais difícil de ler e escrever). Começando, muitos usuários o mantêm conectado à porta USB do computador como fonte de energia e/ou para interagir com o computador enquanto executa. Para robôs e outras coisas longe do computador, uma bateria pode ser usada para energia enquanto o programa embutido é executado.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="_images/hottub_controller.jpg"><img alt="Uma foto de um Arduino em cima de um computador em um porão antigo" src="_images/hottub_controller.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Um antigo Arduino 2009 conectado a sensores de temperatura e controladores de relé que automatizam completamente a temperatura de uma banheira antiga, permitindo que os usuários enviem mensagens de texto para ajustar a temperatura enquanto estão a caminho de casa. O computador lê os e-mails em um programa Python, lê a temperatura atual da banheira e liga ou desliga o relé do aquecedor para atingir a temperatura alvo.</span><a class="headerlink" href="#id2" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Grandes coleções de placas adicionais (chamadas <em>shields</em>) foram construídas e estão no mercado, adicionando recursos adicionais aos Arduinos.</p>
+<p><a class="reference external" href="https://www.raspberrypi.org/">O Raspberry Pi</a> é outro computador de placa única extremamente popular. Ele tem uma CPU muito mais poderosa que a maioria dos Arduinos, uma porta Ethernet, uma placa Wi-Fi, uma porta de vídeo HDMI, uma porta de saída de áudio e uma porta para uma câmera opcional. Ele pode executar muitos dos mesmos programas que você usa no seu PC diário, como navegadores da web e processadores de texto. É usado para educação em ciência da computação e tem um enorme seguimento de entusiastas. Um Pi pode até ser configurado para jogar coleções de jogos antigos (alguém lembra do SNES?). Pessoas rodam seus sistemas de automação residencial e drives em nuvem auto-hospedados com eles (mais sobre isso depois). Raspberry Pis são certamente sistemas mais complexos que Arduinos, mas o poder extra os torna práticos para executar linguagens de programação de nível mais alto (como Python), e os periféricos embutidos os tornam mais flexíveis.</p>
+</section>
+<section id="some-basic-peripherals">
+<span id="index-1"></span><h2>Alguns periféricos básicos<a class="headerlink" href="#some-basic-peripherals" title="Link para este cabeçalho">#</a></h2>
+<p>Você precisará de alguns componentes de hardware para abraçar totalmente os superpoderes do hardware. Aqui está uma lista de alguns periféricos úteis.</p>
+<ul class="simple">
+<li><p><strong>LEDs</strong> — Pequenas luzes que você pode ligar e desligar como indicadores em um jogo, em um painel de controle ou para milhares de outros usos.</p></li>
+<li><p><strong>Resistores</strong> — componentes eletrônicos fundamentais que resistem ao fluxo de eletricidade. Frequentemente necessários para impedir que muita eletricidade flua (por exemplo, frequentemente usados em série com LEDs). Obtenha um pacote variado.</p></li>
+<li><p><strong>Placa de prototipagem</strong> — uma placa na qual você pode conectar componentes de circuito para fazer conexões, mas que também é fácil de desmontar. Usada para experimentação e aprendizado. Muitas vezes, quando um design é finalizado, ele é transferido de uma placa de protótipo para uma placa de circuito personalizada com solda.</p></li>
+<li><p><strong>Placa de relé</strong> — uma série de interruptores eletromagnéticos que podem ser acionados por pequenas tensões (ou seja, de um microcontrolador). Com relés, você pode usar um microcontrolador para ligar e desligar algo grande, como um aquecedor ou uma grande luz. Como sempre, eletricidade é perigosa e pode matar você. Não conecte um relé a algum aparelho sem o treinamento e precauções de segurança adequados. Você pode frequentemente ouvir os relés clicando, e pode reconhecer o som dos relés do sinal de pisca-pisca no seu carro clicando.</p></li>
+<li><p><strong>Sensor de movimento PIR</strong> — Sensores de movimento infravermelho passivo são aqueles sensores de movimento de plástico branco que você vê por toda parte. Eles são baratos e sensíveis. Você pode construir coisas que respondem ao movimento com eles, como um sistema de segurança ou um produto de Halloween que grita quando as pessoas passam.</p></li>
+<li><p><strong>Sonar</strong> — Sonar usa reflexões de som para medir distâncias. Você pode montar periféricos de sonar em seus projetos para ver quão longe estão de uma parede, ou para aumentar o tom do áudio à medida que algo se aproxima, ou o que for.</p></li>
+<li><p><strong>Fotoresistor</strong> — Responde à luz. Pode ser usado para construir um jogo de pega-pega com lanterna, responder à escuridão ou desligar uma luz quando o sol nascer.</p></li>
+<li><p><strong>Transistores</strong> — Componentes fundamentais semelhantes a relés, mas sem partes móveis e com uma gama contínua de respostas, em vez de apenas ligar e desligar. Estes são a base da tecnologia digital por trás de toda a tecnologia de computadores, mas também podem ser úteis para enviar mais corrente do que um microcontrolador pode fornecer com segurança para um LED brilhante ou uma série de LEDs, entre quase infinitas outras coisas. Você precisará de alguns para vários exemplos durante seu treinamento.</p></li>
+<li><p><strong>Cabos de conexão</strong> — Você vai querer um monte de cabos curtos multicoloridos para conectar suas peças de hardware. Estes estão disponíveis com conectores de extremidade dupla macho, dupla fêmea e mistos, e os três estilos são úteis.</p></li>
+<li><p><strong>Fontes de alimentação</strong> — Embora muita coisa divertida e pequena possa funcionar com energia USB, você provavelmente vai querer mais fontes de alimentação para certos projetos. Por exemplo, as tiras de luz LED geralmente requerem energia de 12V (não os 5V que saem de uma porta USB) e muitos amperes. Se você quiser controlar tiras de luz LED, precisará de uma fonte de alimentação e uma placa de relé. Essas fontes de alimentação são exatamente o que você conecta seu laptop e telefone, mas têm diferentes voltagens e classificações de amperagem que podem ser escolhidas com base em suas necessidades.</p></li>
+</ul>
+</section>
+<section id="an-interactive-art-installation">
+<h2>Uma instalação de arte interativa<a class="headerlink" href="#an-interactive-art-installation" title="Link para este cabeçalho">#</a></h2>
+<p>Gostaria de compartilhar um exemplo do tipo de coisas que se tornam possíveis com os superpoderes que estamos discutindo. Uma artista baseada na Suécia chamada Mary Coble encontrou um projeto que eu havia feito usando um Raspberry Pi para piscar um laser em código Morse para se comunicar com luz. Ela havia usado código Morse em projetos anteriores e queria configurar um novo. Os visitantes digitariam cânticos de protesto em um formulário em seus telefones, e a instalação os transmitiria em código Morse pela cidade. Concordei em ajudar, e assim começou uma incursão gratificante e emocionante no mundo do técnico de arte.</p>
+<p>O projeto não foi simples. Mary teve que fazer todo o design artístico e implementação física. Eu forneci uma lista de compras (incluindo um Raspberry Pi, luzes LED e relés), instruções sobre como configurar o Pi e conectar as luzes, e suporte de software remoto. Uma vez que Mary tinha o Pi em sua rede, eu pude conectar remotamente e adicionar o software que havia escrito para receber mensagens de uma página da web e ligar e desligar os relés de acordo.</p>
+<p>No final, o sistema tinha o seguinte esquema:</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="_images/pulse_system.png"><img alt="Um diagrama de fluxo mostrando dados fluindo de usuários da internet para os piscas de LED" src="_images/pulse_system.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">As várias interconexões no backend do sistema PULSE</span><a class="headerlink" href="#id3" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Correu bem, e Mary fez uma versão ainda maior do sistema em sua exposição <em>SHOUT FIRE</em> na Röda Sten Konsthall, em Gotemburgo, Suécia.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Para instalações remotas de qualquer tipo, um <em>túnel SSH reverso</em> pode ser útil. Onde quer que seu controlador esteja conectado a uma rede, ele procurará e se conectará ao seu servidor. Uma vez que isso aconteça, você pode se conectar ao dispositivo remoto através do túnel. Se você quiser mudar o comportamento da instalação de arte uma vez que esteja instalada, esta pode ser uma boa opção para fazê-lo.</p>
+</div>
+<p>Trabalhar com esta artista do outro lado do Atlântico, que eu nunca havia conhecido pessoalmente, em um projeto tão envolvente e legal foi realmente maravilhoso. Parecia que a internet realmente estava superando barreiras da maneira que as pessoas sonhavam nos primeiros dias. Que experiência!<a class="footnote-reference brackets" href="#artist" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="even-cheaper-microcontrollers">
+<span id="index-2"></span><h2>Microcontroladores ainda mais baratos<a class="headerlink" href="#even-cheaper-microcontrollers" title="Link para este cabeçalho">#</a></h2>
+<p>Um dos componentes de hardware mais impressionantes é o Espressif 8266, ou ESP8266. Este é um pequeno circuito com um processador e capacidades Wi-Fi integradas. Em grandes quantidades, custa apenas $4! Ele agora foi sucedido pelo ESP32, que também possui Bluetooth. Você pode encontrar uma unidade única de qualquer um deles em um pacote bacana online por cerca de $10. Eles são super de baixa potência e podem ser colocados em praticamente qualquer coisa que você possa imaginar. Esses pequenos dispositivos podem ser todo o cérebro e sistema de comunicação por trás de qualquer pequeno gadget com capacidade Wi-Fi que você possa sonhar, se estiver interessado em entrar no negócio de construir e vender produtos. Como são tão baratos, não há problema em dedicá-los a aplicações aparentemente triviais. Por exemplo, você pode usá-los:</p>
+<ul class="simple">
+<li><p>Para adicionar um termostato controlado pela internet a uma caldeira/aquecedor antigo. É basicamente um sistema Nest de $4</p></li>
+<li><p>Para adicionar um sensor de abertura sem fio a um armário (que poderia ser usado para disparar um alarme ou manter uma criança ou amigo longe de algo)</p></li>
+<li><p>Como um extensor de campainha que detecta quando a campainha toca e reproduz uma gravação da campainha no estéreo do andar de cima</p></li>
+<li><p>Como o cérebro por trás de um suporte de câmera rastreador de estrelas para manter a câmera apontada para a mesma estrela por muitos minutos enquanto o mundo gira</p></li>
+</ul>
+<p>Esse último exemplo merece mais explicação…</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="_images/esp8266.jpg"><img alt="Uma foto de um pequeno microcontrolador." src="_images/esp8266.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Um microcontrolador ESP8266 conectado a um conjunto de relés. Esta combinação permite que você faça um interruptor inteligente controlado por Wi-Fi com um orçamento muito apertado, tudo enquanto aprende muito e pavimenta o caminho para ideias ainda mais criativas no futuro.</span><a class="headerlink" href="#id4" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="a-star-tracking-camera-mount-for-astrophotography">
+<h2>Um suporte de câmera rastreador de estrelas para astrofotografia<a class="headerlink" href="#a-star-tracking-camera-mount-for-astrophotography" title="Link para este cabeçalho">#</a></h2>
+<p>A Terra gira 360° a cada 24 horas, tornando difícil tirar uma fotografia de longa exposição das estrelas com o obturador aberto por mais de alguns segundos sem obter rastros. Uma solução simples é colocar a câmera em um suporte que gira na mesma velocidade exata, mas na direção oposta, cancelando a rotação e mantendo as estrelas alinhadas com a lente. Você pode comprar um suporte de câmera que faz isso, ou pode fazer um você mesmo usando seus superpoderes digitais. Um mecanismo simples é colocar duas placas juntas com uma dobradiça e ter um motor girando lentamente um parafuso para afastar as placas. Isso é chamado de mecanismo de porta de celeiro, e parece esquematicamente assim:</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="_images/tracker_schematic.png"><img alt="Uma imagem mostrando uma configuração triangular em uma dobradiça" src="_images/tracker_schematic.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Um esquema de um suporte de câmera rastreador de estrelas tipo porta de celeiro.</span><a class="headerlink" href="#id5" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Se você fizer a distância <code class="docutils literal notranslate"><span class="pre">L</span></code> igual a 29 cm, um motor que gira a 1 RPM lhe dará muito próximo da velocidade certa. Nesse caso, este projeto é relativamente simples e não é necessário software sofisticado. Mas essa taxa só funcionará para exposições curtas. Se você quiser exposições muito longas, o motor precisa acelerar à medida que o parafuso é inserido mais. Matematicamente, basta notar que o braço longo do triângulo na figura fica mais longo à medida que o parafuso desliza ao longo da parte inferior da placa superior para ver por quê.</p>
+<p>Se você usar um motor de passo controlado por um microcontrolador (como o ESP8266), pode controlar precisamente a velocidade com que o motor gira e até mesmo acelerá-lo à medida que o tempo passa para fazer a correção tangente (como é chamada) no software!! Isso é extremamente legal e funciona muito bem.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>A propósito, o Sol é uma estrela como qualquer outra, e este projeto pode ser adaptado com motores maiores para rastreá-lo com um painel solar, aumentando a eficiência da sua instalação solar. O software é o mesmo!</p>
+</div>
+<p>Fotos detalhadas, código-fonte e etapas de construção para fazer este projeto exato estão disponíveis sob uma licença de código aberto em <a class="github reference external" href="https://github.com/partofthething/startracker">partofthething/startracker</a></p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="_images/startracker.jpg"><img alt="Uma foto de uma construção real do rastreador de estrelas" src="_images/startracker.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Uma foto de um suporte de câmera rastreador de estrelas em funcionamento.</span><a class="headerlink" href="#id6" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="controlling-hardware-directly-from-your-laptop">
+<h2>Controlando hardware diretamente do seu laptop<a class="headerlink" href="#controlling-hardware-directly-from-your-laptop" title="Link para este cabeçalho">#</a></h2>
+<p>Se você gostaria de interagir com algum hardware, mas não quer ou não precisa se incomodar com microcontroladores, pode simplesmente usar seu laptop diretamente para muitas dessas atividades. Você precisa de uma ponte para o mundo do hardware. Quando li pela primeira vez sobre o "laptop de herança" de Bunny Hwang, ao qual ele adicionou portas de Entrada/Saída de Propósito Geral (GPIO), fiquei com muita inveja e achei que era uma ótima ideia. Isso permitiria controlar relés, ler sinais, piscar luzes, ler dados de vários sensores e todas as coisas que as pessoas fazem com microcontroladores diretamente em um laptop. Acontece que você pode obter um dispositivo USB que adiciona portas GPIO a qualquer computador com bastante facilidade.</p>
+<p>O <a class="reference external" href="https://learn.adafruit.com/adafruit-ft232h-breakout/overview">Adafruit FT232H breakout</a> é um desses dispositivos. A maioria das demonstrações que você pode encontrar online sobre fazer tais coisas com um Arduino ou Raspberry Pi também provavelmente pode ser feita com uma placa como esta e software no seu computador.</p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="_images/ft232h.jpg"><img alt="Outra foto de uma pequena placa de circuito" src="_images/ft232h.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">A placa FT232H breakout, um sistema GPIO de propósito geral para sua porta USB.</span><a class="headerlink" href="#id7" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<p>Por exemplo, se você tiver um nível digital simples e quiser ler os dados ao vivo para apoiar algum experimento ou outro projeto, esta placa breakout é perfeita. Um exemplo de uso seria medir e calibrar precisamente a taxa de mudança do ângulo em um rastreador de estrelas como o discutido anteriormente.</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="_images/calibration_with_fit.png"><img alt="Um gráfico mostrando um ajuste linear aos dados medidos" src="_images/calibration_with_fit.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Dados de nível com linha de melhor ajuste para calibrar um rastreador de estrelas. O código Python que leu esses dados e fez este gráfico está incluído no código de rastreamento de estrelas referenciado na seção anterior, na pasta <code class="docutils literal notranslate"><span class="pre">calibration</span></code>.</span><a class="headerlink" href="#id8" title="Link para esta imagem">#</a></p>
+</figcaption>
+</figure>
+<hr class="docutils"/>
+<p>Este capítulo apresentou brevemente uma variedade de maneiras de fazer a ponte entre computadores e o mundo físico. Espero que esses conceitos ajudem a trazer um momento "Ah-ha!" em relação a algo que você tem sonhado em começar. Muitos dispositivos nas prateleiras das lojas podem ser construídos usando combinações dos componentes que você leu aqui. Que novo produto você pode imaginar?</p>
+<p class="rubric">Notas de rodapé</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="artist" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id1" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<p>A versão mais longa desta história está disponível em <a class="reference external" href="https://partofthething.com/thoughts/helping-an-artist-with-a-morse-code-protest-chant-installation-in-denmark/">https://partofthething.com/thoughts/helping-an-artist-with-a-morse-code-protest-chant-installation-in-denmark/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="left-prev" href="06_programming.html" title="página anterior">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">anterior</p>
+<p class="prev-next-title">Programação</p>
+</div>
+</a>
+<a class="right-next" href="08_selfhost.html" title="próxima página">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">próxima</p>
+<p class="prev-next-title">Hospedagem Própria</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Conteúdo
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-era-of-cheap-user-friendly-microcontrollers">A era dos microcontroladores baratos e fáceis de usar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-basic-peripherals">Alguns periféricos básicos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-interactive-art-installation">Uma instalação de arte interativa</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-cheaper-microcontrollers">Microcontroladores ainda mais baratos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-star-tracking-camera-mount-for-astrophotography">Um suporte de câmera rastreador de estrelas para astrofotografia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controlling-hardware-directly-from-your-laptop">Controlando hardware diretamente do seu laptop</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+Por Nick Touran
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2018-2024, Nicholas W. Touran.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

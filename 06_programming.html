@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Programming" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/06_programming.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="O verdadeiro poder dos computadores, é claro, vem de programá-los. Saber programar, mesmo que um pouco, desbloqueia oportunidades inimagináveis de fazer o computador trabalhar melhor para você de maneiras mais pessoais. Além disso, habilidades de programação também desbloqueiam empregos muito bem remunerados. O advento do Machine Le..." property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="O verdadeiro poder dos computadores, é claro, vem de programá-los. Saber programar, mesmo que um pouco, desbloqueia oportunidades inimagináveis de fazer o computador trabalhar melhor para você de maneiras mais pessoais. Além disso, habilidades de programação também desbloqueiam empregos muito bem remunerados. O advento do Machine Le..." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Programação — Documentação Digital Superpowers 2.0</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script async="async" src="js/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = '06_programming';</script>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="07_robotics.html" rel="next" title="Robotics and Hardware"/>
+<link href="05_publishing.html" rel="prev" title="Publishing"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Pular para o conteúdo principal</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Voltar ao topo
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Documentação Digital Superpowers 2.0 - Início" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Documentação Digital Superpowers 2.0 - Início"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Around the House</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">Around the Office</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Art Studio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publishing</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robotics and Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Self-Hosting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusion</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Alternar barra lateral primária">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2F06_programming.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Abrir um problema">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Baixar esta página" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/06_programming.rst" target="_blank" title="Baixar arquivo fonte">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Imprimir para PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Modo tela cheia">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Alternar barra lateral secundária">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Programação</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Conteúdo </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-of-anything">Acompanhando mudanças de qualquer coisa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git">Usando git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-something-in-a-github-repository">Corrigindo algo em um repositório GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-program">Por que programar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-languages">Linguagens de programação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-python-programs">Escrevendo programas em Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-program-to-approximate-pi">Um programa para aproximar <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-linear-regression">Uma regressão linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bridge-to-machine-learning">A ponte para o aprendizado de máquina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-user-interfaces">Interfaces Gráficas de Usuário</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-applications">Aplicações web</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="programming">
+<span id="index-0"></span><span id="id1"></span><h1>Programação<a class="headerlink" href="#programming" title="Link para este cabeçalho">#</a></h1>
+<p>O <em>verdadeiro</em> poder dos computadores, é claro, vem de programá-los. Saber programar, mesmo que um pouco, desbloqueia oportunidades inimagináveis de fazer o computador trabalhar melhor para você de maneiras mais pessoais. Além disso, habilidades de programação também desbloqueiam empregos muito bem remunerados. O advento da programação assistida por Machine Learning vai claramente impactar a arte de programar em geral, mas para ser assistido por ML/IA, você vai querer ter uma base sólida nos fundamentos. Neste capítulo, você experimentará um sistema de controle de versão chamado <code class="docutils literal notranslate"><span class="pre">git</span></code>, escreverá alguns programas simples em Python, encontrará recursos sobre aprendizado de máquina e será apresentado a um framework de aplicativos web chamado Django.</p>
+<section id="tracking-changes-of-anything">
+<span id="index-1"></span><h2>Acompanhando mudanças de qualquer coisa<a class="headerlink" href="#tracking-changes-of-anything" title="Link para este cabeçalho">#</a></h2>
+<p>Mesmo que você nunca programe, você se beneficiará ao conhecer sistemas de controle de versão (VCS). Um VCS permite que você crie uma linha do tempo reversível de qualquer coisa em que você esteja trabalhando. Pense nisso como o recurso “Controlar Alterações” de um processador de texto, mas mais poderoso e para mais do que apenas documentos.</p>
+<p>VCSs são geralmente associados a programadores porque eles <em>realmente</em> se beneficiam de ter uma linha do tempo reversível de seu software. Isso é útil muitas vezes, como quando um programa que costumava funcionar não funciona mais. Os programadores olham a linha do tempo das mudanças no código-fonte, retrocedem e reproduzem, enquanto executam seu programa para descobrir onde o erro foi introduzido.</p>
+<p>Algumas pessoas mantêm seu currículo em um VCS. Elas querem ver seu progresso e também "ramificá-lo" para fazer versões ligeiramente diferentes para várias candidaturas de emprego.</p>
+<p>Um VCS também é maravilhoso para colaboração. Você sabe como as pessoas enviam por e-mail versões de documentos como <code class="docutils literal notranslate"><span class="pre">Proposta_FINAL_final_nt_jrc2_rascunho.docx</span></code>? Um VCS pode tornar esse tipo de operação muito melhor. Todos podem trabalhar em sua própria cópia de um documento e então essas cópias podem ser mescladas. Um problema com essa abordagem é que o VCS funciona melhor com arquivos de texto puro, então se você quiser seguir por esse caminho, considere uma linguagem de marcação leve como ReST ou Markdown (veja <a class="reference internal" href="05_publishing.html#publishing"><span class="std std-ref">Publicação</span></a>).</p>
+<p>Alguns VCSs notáveis incluem <a class="reference external" href="https://git-scm.com/">git</a>, <a class="reference external" href="https://www.mercurial-scm.org/">mercurial</a>, <a class="reference external" href="https://subversion.apache.org/">subversion</a> e <a class="reference external" href="https://www.perforce.com/">Perforce</a>. Git é um favorito bastante universal. É o epônimo do famoso GitHub, que a Microsoft adquiriu em 2018 por vários bilhões de dólares.</p>
+<section id="using-git">
+<span id="id2"></span><h3>Usando git<a class="headerlink" href="#using-git" title="Link para este cabeçalho">#</a></h3>
+<p>O Git tem uma leve reputação de ser difícil de aprender. Não tema, não é tão ruim. O Git foi feito para a linha de comando, mas pode ser usado graficamente se você preferir. Para os usos mais comuns, você só precisa saber alguns comandos. Aqui estão eles:</p>
+<table class="table" id="id6">
+<caption><span class="caption-text">Alguns comandos chave do git</span><a class="headerlink" href="#id6" title="Link para esta tabela">#</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Propósito</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code></p></td>
+<td><p>Inicializar um novo repositório <code class="docutils literal notranslate"><span class="pre">git</span></code> na pasta atual</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code></p></td>
+<td><p>Fazer uma cópia local de um repositório remoto (por exemplo, do GitHub ou da sua equipe)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code></p></td>
+<td><p>Marcar um ou mais arquivos para fazer parte de um novo commit que está em processo</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code></p></td>
+<td><p>Tomar todas as mudanças marcadas e embalá-las como uma “mudança” discreta para ser lembrada para sempre.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p></td>
+<td><p>Atualizar o repositório local com quaisquer mudanças que alguém tenha feito no servidor remoto.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code></p></td>
+<td><p>Enviar todos os nossos commits locais para o servidor remoto (para colaboração)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">log</span></code></p></td>
+<td><p>Ver todas as mudanças que você ou qualquer outra pessoa fez</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span></code></p></td>
+<td><p>Verificar um commit anterior ou uma ramificação separada (para voltar no tempo ou tentar caminhos alternativos)</p></td>
+</tr>
+</tbody>
+</table>
+<p>A melhor maneira de aprender é experimentar e testar.</p>
+<table class="table" id="id7">
+<caption><span class="caption-text">Instalando git</span><a class="headerlink" href="#id7" title="Link para esta tabela">#</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SO</p></th>
+<th class="head"><p>Comando</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">git</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">git</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>macOS</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">git</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Em uma nova pasta vazia, execute <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">init</span></code> para iniciar um novo repositório. Crie um novo arquivo de texto chamado <code class="docutils literal notranslate"><span class="pre">file1.txt</span></code> na pasta usando seu editor de texto e escreva algumas linhas de sua escolha. Por exemplo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Tio Dave: Casado com Rose; gosta de minigolfe
+Tia Malia: Foi para a Universidade de Michigan
+Prima Jingjing: Do Havaí
+Terceiro primo Pete: Gosta de cozinhar
+</pre></div>
+</div>
+<p>Estagie-o com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git add file1.txt
+</pre></div>
+</div>
+<p>Faça o commit com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git commit -m "Commit inicial de parentes"
+</pre></div>
+</div>
+<p>Faça algumas alterações no arquivo. Exclua uma linha ou adicione uma nova. Veja as diferenças em relação ao último commit executando:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git diff
+</pre></div>
+</div>
+<p>Estagie e faça o commit das novas alterações (repetindo os passos acima). Agora, digamos que você queira voltar à versão inicial do arquivo retrocedendo ao primeiro commit. Primeiro, você precisa descobrir qual é o “endereço” do commit, que é uma longa sequência de letras e números. Execute:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git log
+</pre></div>
+</div>
+<p>para obter uma lista de commits. Copie as primeiras 8 ou mais letras/números do endereço do primeiro commit e preencha-os para sua versão do seguinte comando (seu endereço será diferente):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout a3e2b54
+</pre></div>
+</div>
+<p>Agora olhe para o arquivo e verá que ele está em seu commit original. Volte para o commit mais recente com:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>git checkout master
+</pre></div>
+</div>
+<p>Pronto, você usou a maioria das operações principais do <code class="docutils literal notranslate"><span class="pre">git</span></code> agora. Sem dúvida, alguns desses comandos ainda parecerão um pouco misteriosos. Há um livro inteiro gratuito sobre isso na página oficial do git chamado <a class="reference external" href="https://git-scm.com/book/en/v2">Pro Git</a> e inúmeros tutoriais na internet. Faremos um exemplo semelhante, mas em um repositório colaborativo na próxima seção.</p>
+<p>Além de trabalhar em arquivos de texto, há também uma extensão chamada <a class="reference external" href="https://git-lfs.github.com/">Git Large File Storage</a> (LFS) que pode ser usada para armazenar grandes ativos binários de forma eficiente em um repositório git (arquivos de design gráfico, arquivos de ciência, etc.). <a class="reference external" href="https://git-annex.branchable.com/">Git-annex</a>, como aludido em <a class="reference internal" href="02_fundamentals.html#backups"><span class="std std-ref">Backups</span></a>, pode rastrear informações sobre grandes conjuntos de arquivos sem armazenar os próprios arquivos no repositório git. Isso foi originalmente construído para gerenciar metadados e sincronização de bibliotecas de fotos e músicas. Está encontrando usos em áreas avançadas, como pesquisa de big data também.</p>
+</section>
+<section id="fixing-something-in-a-github-repository">
+<h3>Corrigindo algo em um repositório GitHub<a class="headerlink" href="#fixing-something-in-a-github-repository" title="Link para este cabeçalho">#</a></h3>
+<p><a class="reference external" href="https://github.com/">GitHub</a> é um site (agora pertencente à Microsoft) que armazena milhares de repositórios git de projetos. Você pode clonar, puxar e enviar para colaborar na construção de software. Como exercício, vamos ver se podemos contribuir para um projeto de código aberto.</p>
+<p>Primeiro, você precisará de uma conta no GitHub (use seu gerenciador de senhas para criar sua senha!). Em seguida, encontre um repositório para enviar uma solicitação de pull. Você pode criar seu próprio repositório e usá-lo, ou realmente fazer uma contribuição para a equipe de outro projeto. Uma maneira muito fácil de tentar seria procurar no GitHub por erros comuns de ortografia de uma palavra e, em seguida, fazer uma alteração para corrigi-la. É melhor encontrar erros de ortografia em comentários para não correr o risco de estragar o código. Melhor ainda, adicione alguma clarificação à documentação de um projeto que você tem usado um pouco.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Certifique-se de que o repositório tenha atividade recente, caso contrário, o mantenedor pode nunca responder à sua solicitação de pull.</p>
+</div>
+<table class="table" id="id8">
+<caption><span class="caption-text">Fluxo de trabalho para colaborar com pessoas no GitHub</span><a class="headerlink" href="#id8" title="Link para esta tabela">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Operação</p></th>
+<th class="head"><p>Descrição</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fork do repositório alvo</p></td>
+<td><p>Escolha um repositório para atualizar e navegue até ele. Clique no botão “Fork” na página do GitHub. Isso fará uma cópia do repositório na sua própria conta.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clone sua cópia do repositório para sua máquina</p></td>
+<td><p>Na linha de comando, execute <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/user/repo.git</span></code> preenchendo com seu nome de usuário e repo.git de acordo com seu fork (você pode obter esse endereço facilmente clicando no botão verde “clone” no GitHub)</p></td>
+</tr>
+<tr class="row-even"><td><p>Faça as modificações no código-fonte em seu computador</p></td>
+<td><p>Navegue até o(s) arquivo(s) que deseja alterar, altere-o(s) e salve-o(s).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Estagie e faça o commit de suas alterações para seu repositório local</p></td>
+<td><p>Execute <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-u</span></code> para <em>estagiar</em> todos os arquivos alterados e, em seguida, execute <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">"Atualizado</span> <span class="pre">ortografia"</span></code> (use uma mensagem de commit adequadamente descritiva).</p></td>
+</tr>
+<tr class="row-even"><td><p>Envie as alterações para seu fork pessoal do repositório no GitHub</p></td>
+<td><p>Execute <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span></code>. Agora sua alteração está ativa no GitHub, mas apenas no seu fork do projeto original. Você pode ter que digitar sua senha do GitHub neste estágio <a class="footnote-reference brackets" href="#ssh" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Crie uma solicitação de pull para se comunicar com a equipe original</p></td>
+<td><p>Deve haver um botão no seu GitHub agora que diz “Pull Request”. Clique nele e preencha o formulário com detalhes do que você alterou e por quê. Isso agora entrará em um processo de revisão/aprovação com a equipe original. Se eles aceitarem, sua alteração ficará ativa.</p></td>
+</tr>
+</tbody>
+</table>
+<p>É isso. Como de costume, isso é apenas arranhar a superfície, mas esses são os fundamentos. Se você conseguir fazer isso, está basicamente pronto para participar do desenvolvimento colaborativo ou publicação usando git. E com isso, vamos para a programação real.</p>
+</section>
+</section>
+<section id="why-program">
+<h2>Por que programar?<a class="headerlink" href="#why-program" title="Link para este cabeçalho">#</a></h2>
+<p>Programar é o Santo Graal dos superpoderes digitais. Coisas como Machine Learning, jogos, processos de negócios, redes sociais, e assim por diante estão enraizadas na programação. Claro, é uma disciplina inteira que pode levar anos ou até décadas para <em>realmente</em> dominar, mas você pode fazer coisas significativas muito prontamente e seguir daí conforme sua situação. Se você quiser, pode fazer uma carreira bem remunerada inteira com isso. Ou você pode apenas se divertir.</p>
+<p>Estou bastante convencido de que a programação deveria ser um tópico fundamental nas escolas de ensino médio até o ensino superior, possivelmente até substituindo algum currículo obrigatório de matemática que muito poucas pessoas acabam usando. Digo isso como um engenheiro de ciências exatas com doutorado: nunca tive que fazer divisão longa de polinômios e nunca terei. Mas, rapaz, já vi pessoas em todas as áreas da vida lutarem com coisas em que um pouco de exposição à programação teria ajudado.</p>
+<p>A melhor maneira de aprender a programar é reconhecer que você tem um problema que deseja resolver e que um programa poderia ajudá-lo a resolvê-lo. Por exemplo, um amigo meu que agora é professor de matemática aplicada em Harvard me deu seu enigma matemático favorito uma vez:</p>
+<blockquote class="pull-quote">
+<div><p>Dadas duas 8’s e duas 3’s, combine-as com as quatro operações matemáticas básicas (+, −, ÷, ×) para obter 24. Você tem que usar cada uma. Por exemplo, 8+8+3+3 é um palpite válido, mas está errado porque isso equivale a 22, não 24. Da mesma forma, 8×3=24 é inválido porque você usou apenas um 8 e um 3.</p>
+</div></blockquote>
+<p>Eu lutei por um tempo e decidi que um programa que adivinhasse todas as opções potenciais seria útil. No final, funcionou!</p>
+<p>Mais praticamente, um amigo estava fazendo uma pesquisa médica usando um grande conjunto de dados de reabastecimento de farmácias e estava passando por esse processo tedioso e sujeito a erros em uma planilha para quantificar possíveis lacunas de medicação. Ela explicou seu processo em detalhes e então eu a ajudei a criar um pequeno programa que fazia o que ela estava fazendo. Assim, ela foi liberada para ajustar e depurar seu <em>processo</em>. Ela executou o programa dezenas de vezes, analisando o algoritmo que estava usando e chegando a conclusões interessantes.</p>
+<p>Pessoalmente, passei muitos anos escrevendo programas que ajudam a simular reatores nucleares. Uma vez que temos um reator nuclear virtual, podemos ajustar seu design e realizar “experimentos” que custariam bilhões de dólares para executar no mundo real até acharmos que nosso design é ótimo. Temos que nos esforçar muito para garantir que os modelos correspondam à realidade (por exemplo, simulando coisas que realmente operaram e comparando os resultados com medições). A sinergia entre modelos físicos, simulações numéricas e experimentos é um verdadeiro cavalo de batalha na ciência e engenharia em geral.</p>
+<p>Então, é claro, programadores profissionais constroem e mantêm todos os sistemas de software massivos por trás de uma grande fração de nossas experiências diárias.</p>
+</section>
+<section id="programming-languages">
+<span id="index-2"></span><h2>Linguagens de programação<a class="headerlink" href="#programming-languages" title="Link para este cabeçalho">#</a></h2>
+<p>Existem centenas de <em>linguagens de programação</em>. Cada uma delas tem o objetivo de traduzir (ou <em>compilar</em>) a entrada humana (<em>código-fonte</em>) em operações elétricas que o computador pode realizar. Suas diferenças surgem de diferentes compensações que seus criadores estavam visando:</p>
+<ul class="simple">
+<li><p>É melhor ter um programa que roda muito rápido e pode falhar sem dizer por quê, ou um que roda devagar, mas diz em detalhes onde estava quando algo deu errado para ajudar na depuração?</p></li>
+<li><p>O mesmo código-fonte deve rodar em muitos tipos de computadores, ou o programador deve manter diferentes versões para diferentes máquinas?</p></li>
+<li><p>O programador deve esperar 10 minutos entre mudar o código-fonte e executar o programa para que o compilador possa otimizar agressivamente, ou deve ser instantâneo?</p></li>
+</ul>
+<p>Linguagens de programação de nível muito baixo como <em>assembly</em> rodam extremamente rápido, mas requerem personalizações para cada modelo de CPU e são desafiadoras de escrever. Por outro lado, linguagens de alto nível como <em>JavaScript</em> são agradáveis de ler, mas geralmente lentas. Uma das linguagens mais recentes e muito populares, <em>Rust</em>, tenta permitir que programadores escrevam código muito “seguro” (se compilar, terá menos bugs do que o normal) enquanto ainda roda extremamente rápido e em paralelo.</p>
+<p>Entre as indústrias de ciência de dados, automação, web e engenharia (e muitas outras!), a linguagem <em>Python</em> tem se saído muito bem na última década ou duas. É uma linguagem de alto nível interpretada que roda devagar por si só. Mas é tão popular que as pessoas a interligaram bem com algumas bibliotecas matemáticas, gráficas e de aprendizado de máquina de nível inferior e extremamente rápidas, tornando-a um bom cavalo de batalha. Há também uma vibrante coleção de outros módulos que as pessoas criaram que fazem todo tipo de coisa como análise estatística, criação de gráficos e aplicativos web. Aqui, vamos experimentar o Python. Dependendo do seu objetivo final, outra linguagem pode ser melhor.</p>
+</section>
+<section id="writing-python-programs">
+<h2>Escrevendo programas em Python<a class="headerlink" href="#writing-python-programs" title="Link para este cabeçalho">#</a></h2>
+<p>Antes de escrever um programa em Python, precisamos baixar o interpretador Python. É o que traduz o código Python em operações reais que seu computador pode realizar.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Você pode pular esta etapa se já tiver o Python instalado. Descubra executando <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-V</span></code> na sua linha de comando e vendo se ele gera um erro.</p>
+</div>
+<table class="table" id="id9">
+<caption><span class="caption-text">Instalando Python</span><a class="headerlink" href="#id9" title="Link para esta tabela">#</a></caption>
+<colgroup>
+<col style="width: 30.0%"/>
+<col style="width: 70.0%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>SO</p></th>
+<th class="head"><p>Comando</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">choco</span> <span class="pre">install</span> <span class="pre">python</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux</p></td>
+<td><p>Provavelmente já está instalado</p></td>
+</tr>
+<tr class="row-even"><td><p>macOS</p></td>
+<td><p>Provavelmente já está instalado</p></td>
+</tr>
+</tbody>
+</table>
+<p>Execute <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-V</span></code> para garantir que funciona. Se você apenas executar <code class="docutils literal notranslate"><span class="pre">python</span></code> na linha de comando, você verá um <em>prompt</em> do Python que se parece com <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>. Digitar <code class="docutils literal notranslate"><span class="pre">exit()</span></code> sairá quando você terminar. Você pode digitar <em>comandos Python</em> aqui, e eles serão executados um após o outro. Por exemplo, podemos usá-lo como uma calculadora. Primeiro apenas com números:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>Todas as linguagens de programação têm <em>variáveis</em> onde você pode armazenar o resultado de alguma operação em um nome como <code class="docutils literal notranslate"><span class="pre">x</span></code> ou <code class="docutils literal notranslate"><span class="pre">numero_de_clientes</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">=</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">y</span><span class="o">=</span><span class="mi">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+<p>Você também pode definir <em>sequências</em> e então repetir uma operação em todos os elementos da sequência em um loop:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">nomes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Ford"</span><span class="p">,</span> <span class="s2">"Honda"</span><span class="p">,</span> <span class="s2">"Jeep"</span><span class="p">,</span> <span class="s2">"Chevy"</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">nome</span> <span class="ow">in</span> <span class="n">nomes</span><span class="p">:</span>
+<span class="go">        print(nome.upper())</span>
+<span class="go">FORD</span>
+<span class="go">HONDA</span>
+<span class="go">JEEP</span>
+<span class="go">CHEVY</span>
+</pre></div>
+</div>
+<p>Bibliotecas embutidas fornecem a capacidade de fazer coisas úteis como amostrar números aleatórios. Quando você executa isso, verá números diferentes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">random</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="go">0.8254737295983463</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+<span class="go">0.2630839054490208</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="go">88</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="s1">'Pizza'</span><span class="p">,</span><span class="s1">'Ramen'</span><span class="p">,</span><span class="s1">'Eggs'</span><span class="p">,</span><span class="s1">'Pho'</span><span class="p">])</span>
+<span class="go">'Eggs'</span>
+</pre></div>
+</div>
+<p>Números aleatórios são fundamentais para coisas como jogos e criptografia. Essa última linha é basicamente uma bola 8 universal, que é útil se você precisar de ajuda para decidir o que será o jantar.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Neste ponto, você está bem posicionado para passar pelo <a class="reference external" href="https://docs.python.org/3/tutorial/introduction.html">tutorial oficial do Python</a>. Ele é voltado principalmente para pessoas que já programaram um pouco antes, mas mesmo que você não tenha, é fácil acompanhar e ter alguma exposição à sintaxe e possibilidades.</p>
+</div>
+<p>Executar comandos linha a linha no prompt do Python é útil para explorar e realizar tarefas simples, mas programas reais são escritos como conjuntos de comandos em arquivos de texto. Veja <a class="reference internal" href="03_office.html#texteditors"><span class="std std-ref">Editores de texto e extensões</span></a> para garantir que você tenha um programa apropriado para criar código-fonte.</p>
+<section id="a-program-to-approximate-pi">
+<h3>Um programa para aproximar <span class="math notranslate nohighlight">\(\pi\)</span><a class="headerlink" href="#a-program-to-approximate-pi" title="Link to this heading">#</a></h3>
+<p>Vamos fazer um programa real que faz algo interessante: aproxima <span class="math notranslate nohighlight">\(\pi\)</span> com o método de Monte Carlo. Isso aproveita o fato de que computadores não podem se entediar para aproximar uma constante fundamental da natureza basicamente jogando dardos.</p>
+<p>Imagine que você está vendado e jogando dardos em um tabuleiro perfeitamente quadrado com comprimento de lado de 1 m e com um círculo desenhado nele que toca apenas as bordas. Se você jogar aleatoriamente, o número de dardos que caem dentro do círculo será proporcional à área do círculo, enquanto o número de dardos que caem em qualquer lugar do tabuleiro será proporcional à área do quadrado. Se você jogar milhões e milhões de dardos, essas aproximações se tornarão muito boas, e suas contagens dirão o que é <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<div class="figure" id="id10" style="text-align: center"><p><img alt="Figure made with TikZ" src="_images/tikz-ce71ff7259fde08ea3977445344105af32fe866f.png"/></p>
+<p><span class="caption-text">O tabuleiro de dardos</span></p>
+</div><div class="math notranslate nohighlight">
+\[\begin{split}\text{Área do Quadrado} &amp;= s^2 \\
+\text{Área do Círculo} &amp;= \pi \left(\frac{s}{2}\right)^2\end{split}\]</div>
+<p>Dividindo essas equações, obtemos:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}\frac{\text{Área do Quadrado}}{\text{Área do Círculo}} = \frac{4}{\pi} \\\end{split}\\\begin{split}\text{ou} \\\end{split}\\\pi = 4 \times \frac{\text{Área do Círculo}}{\text{Área do Quadrado}}\end{aligned}\end{align} \]</div>
+<p>Em vez de jogarmos os dardos nós mesmos, podemos escrever um programa para simular os lançamentos de dardos e aproximar a razão das áreas. Para fazer isso, colocamos o seguinte em um novo arquivo de texto chamado <code class="docutils literal notranslate"><span class="pre">darts.py</span></code>. Observe que todas as linhas que começam com <code class="docutils literal notranslate"><span class="pre">#</span></code> são apenas comentários e não são executadas (então você não precisa digitá-las).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>  
+
+<span class="n">RADIUS</span> <span class="o">=</span> <span class="mf">1.0</span>   <span class="c1"># define uma constante</span>
+
+<span class="n">num_in_circle</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># inicializa nossa contagem</span>
+
+<span class="c1"># pergunta ao usuário quantos dardos lançar</span>
+<span class="n">num_darts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Número de dardos: '</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">_individual_dart</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_darts</span><span class="p">):</span>
+    <span class="c1"># para cada lançamento de dardo, pegue dois números aleatórios</span>
+    <span class="c1"># entre 0 e 1.</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+    <span class="c1"># Alguém se lembra da fórmula da distância? </span>
+    <span class="c1"># Podemos pular sqrt aqui porque sqrt(1) = 1</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">RADIUS</span><span class="p">:</span>
+        <span class="c1"># incrementa a contagem no círculo</span>
+        <span class="n">num_in_circle</span> <span class="o">=</span> <span class="n">num_in_circle</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">num_in_circle</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">num_darts</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Pi é aproximadamente: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Execute o programa com <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">darts.py</span></code> no prompt de comando normal, não no do Python. Se ainda vir <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> na sua linha de comando, execute <code class="docutils literal notranslate"><span class="pre">exit()</span></code>. Ele deve dar:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ python darts.py
+Digite o número de dardos: 100000
+Pi é aproximadamente: 3.14504
+</pre></div>
+</div>
+<p>Bem próximo! A resposta correta é <code class="docutils literal notranslate"><span class="pre">3.1415926...</span></code>. Se você lançar apenas alguns dardos, a resposta será muito mais errada (tente!). Ah, o teorema central do limite em ação!</p>
+<p>Meu computador leva apenas um segundo para fazer 1 milhão de lançamentos de dardos, mas não faça muitos, pode demorar muito! Lembre-se: <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> irá abortar um programa em execução se você ficar preso.</p>
+<p>O programa só amostra números entre 0 e 1, então estamos realmente operando apenas no primeiro quadrante do tabuleiro de dardos (superior esquerdo). Isso é OK porque o tabuleiro é simétrico.</p>
+<p>O que fazer se quisermos plotar nossos resultados? Precisaremos de algumas bibliotecas de terceiros para fazer isso (coisas que fazem parte da comunidade Python, mas não estão incluídas no próprio Python). Para obtê-las, use o <em>gerenciador de pacotes Python</em>, que é chamado <code class="docutils literal notranslate"><span class="pre">pip</span></code>. É muito semelhante aos gerenciadores de pacotes do sistema que temos usado, mas apenas puxa módulos Python. Precisamos de duas coisas para ter plotagem:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install --user numpy
+pip install --user matplotlib
+</pre></div>
+</div>
+<p>Precisamos modificar o programa para acompanhar as coordenadas <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y)</span></code> e, em seguida, plotá-las no final. Então, faremos <em>listas</em> para armazenar cada coordenada. Aqui está (desta vez como <code class="docutils literal notranslate"><span class="pre">darts_plot.py</span></code>):</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">random</span>  
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">RADIUS</span> <span class="o">=</span> <span class="mf">1.0</span>   
+
+<span class="n">coords_inside</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">coords_outside</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">num_darts</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'Número de dardos: '</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">num_darts</span> <span class="o">&gt;</span> <span class="mi">1000000</span><span class="p">:</span>
+    <span class="c1"># verificação de erro</span>
+    <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s1">'Muitas partículas.'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">_individual_dart</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_darts</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+
+    <span class="n">d</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">RADIUS</span><span class="p">:</span>
+        <span class="c1"># adiciona à lista de coords dentro do círculo</span>
+        <span class="n">coords_inside</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># também rastrear forasteiros para plotagem</span>
+        <span class="n">coords_outside</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">))</span> 
+<span class="n">pi</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">coords_inside</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">num_darts</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Pi é aproximadamente: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+
+<span class="c1"># Fazer plotagem</span>
+<span class="c1"># descompactar x's e y's em suas próprias listas</span>
+<span class="n">xinside</span><span class="p">,</span> <span class="n">yinside</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">coords_inside</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xinside</span><span class="p">,</span> <span class="n">yinside</span><span class="p">,</span> <span class="s1">'b.'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'Dentro'</span><span class="p">)</span>
+
+<span class="n">xoutside</span><span class="p">,</span> <span class="n">youtside</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">coords_outside</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xoutside</span><span class="p">,</span> <span class="n">youtside</span><span class="p">,</span> <span class="s1">'gx'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'Fora'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Aproximação de $\pi$'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'x (m)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'y (m)'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># descomentar para salvar como arquivo</span>
+<span class="c1">#plt.savefig('darts.png', dpi=200) </span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Aviso</p>
+<p>Para esta versão, é melhor não tentar lançar muitos dardos ou sua máquina realmente pode travar.</p>
+</div>
+<p>E aqui está o resultado:</p>
+<figure class="align-center" id="id11">
+<a class="reference internal image-reference" href="_images/darts.png"><img alt="A plot showing a quarter-circle where darts hit or missed" src="_images/darts.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Plotagem de 10.000 dardos acertando ou errando.</span><a class="headerlink" href="#id11" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Bastante sofisticado! Este é, admitidamente, um método muito ineficiente para aproximar <span class="math notranslate nohighlight">\(\pi\)</span>. O método fundamental de gerar números aleatórios e executar testes computacionais, no entanto, é extremamente poderoso e valioso. Usado pela primeira vez para modelar armas termonucleares nos mainframes originais na década de 1950, esses métodos são usados em toda a ciência, engenharia, gestão de riscos, seguros e finanças. Agora você está bem no caminho para se tornar um mega-milionário quanto em Wall Street.</p>
+<p>Para mais inspiração sobre que tipo de gráficos você pode fazer com Python (bem como código de exemplo para aprender a fazer isso), confira a <a class="reference external" href="https://matplotlib.org/stable/gallery/">galeria matplotlib</a> e <a class="reference external" href="https://plotly.com/python/">plotly</a>.</p>
+</section>
+<section id="a-linear-regression">
+<h3>Uma regressão linear<a class="headerlink" href="#a-linear-regression" title="Link to this heading">#</a></h3>
+<p>Python é ótimo para estatísticas. Isso é frequentemente útil para suas equipes de pesquisa e em casa (uma vez usei regressões para estimar a que horas o aquecedor precisava se ligar para atingir a temperatura desejada, dada a temperatura externa a cada manhã durante o inverno em Michigan). Vamos fazer um exemplo simples de leitura de dados diretamente do Excel. A biblioteca <a class="reference external" href="https://pandas.pydata.org/">pandas</a> fornece capacidades de análise de dados de alto nível, mas vamos usá-la apenas para ler do Excel:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install --user pandas
+pip install --user xlrd
+</pre></div>
+</div>
+<p>Precisamos de alguns dados para processar. Abra seu programa de planilhas favorito (Excel ou Open Office Calc funcionam bem, por exemplo) e vamos gerar alguns dados ruidosos. Vamos usar uma linha desta fórmula:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}y = mx + b + \epsilon\\\end{split}\]</div>
+<p>onde:</p>
+
+<div class="math notranslate nohighlight">
+\[\begin{split}m &amp;= 3.5 \\
+b &amp;= 2.3 \\
+\epsilon &amp;= \text{Ruído uniforme de -4 a 4}\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Se você tiver seus próprios dados nos quais deseja fazer uma regressão, basta carregá-los em vez disso!</p>
+</div>
+<p>Em uma nova planilha, rotule as duas primeiras colunas como <code class="docutils literal notranslate"><span class="pre">X</span></code> e <code class="docutils literal notranslate"><span class="pre">Y</span></code>. Na primeira coluna, insira a fórmula: <code class="docutils literal notranslate"><span class="pre">=RAND()*5</span></code> para obter valores aleatórios de x entre 0 e 5. Clique na pequena caixa preta no canto inferior direito da célula e arraste para baixo 30 ou mais células para obter muitos valores aleatórios de X. Em seguida, na coluna <code class="docutils literal notranslate"><span class="pre">Y</span></code>, insira nossa linha como <code class="docutils literal notranslate"><span class="pre">=3.5*A1</span> <span class="pre">+</span> <span class="pre">2.3</span> <span class="pre">+</span> <span class="pre">(RAND()*8-4)</span></code> <a class="footnote-reference brackets" href="#noise" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>. Clique duas vezes na pequena caixa preta para preencher para baixo. Salve o arquivo como <code class="docutils literal notranslate"><span class="pre">data.xlsx</span></code>. Ele ficará assim:</p>
+<figure class="align-center" id="id12">
+<a class="reference internal image-reference" href="_images/random-data.png"><img alt="A screenshot of a spreadsheet with noisy data in it" src="_images/random-data.png" style="width: 30%;"/></a>
+<figcaption>
+<p><span class="caption-text">Exemplo de dados ruidosos simulando nossa linha. Sim, poderíamos usar Python para criar esses dados, mas muitos de nós recebemos dados em planilhas.</span><a class="headerlink" href="#id12" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Para fazer a regressão:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+
+<span class="c1"># Ler dados</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">'data.xlsx'</span><span class="p">)</span>
+
+<span class="c1"># Pegar as colunas que queremos</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'X'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'Y'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Calcular a regressão</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># descompactar resultados em nomes úteis</span>
+<span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_val</span><span class="p">,</span> <span class="n">p_val</span><span class="p">,</span> <span class="n">std_err</span><span class="p">)</span> <span class="o">=</span> <span class="n">results</span>
+
+<span class="c1"># Exibir resultados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Inclinação: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">slope</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Intercepto: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">intercept</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'R-quadrado: </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r_val</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'P-val:     </span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p_val</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Aqui está o resultado com meus dados:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Inclinação:     3.473511906229649
+Intercepto: 1.8192562724560553
+R-quadrado: 0.861400909580644
+P-val:     1.1563714298035524e-12
+</pre></div>
+</div>
+<p>É tudo o que precisa para fazer uma regressão! Podemos plotá-la também, adicionando este código:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fazer um gráfico enquanto estamos nisso. </span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">modelX</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">modelY</span> <span class="o">=</span> <span class="n">modelX</span> <span class="o">*</span> <span class="n">slope</span> <span class="o">+</span> <span class="n">intercept</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">'o'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Dados'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">modelX</span><span class="p">,</span> <span class="n">modelY</span><span class="p">,</span> <span class="s1">'--'</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">'Modelo'</span><span class="p">)</span>
+
+<span class="c1"># Adicionar rótulos e formatação</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'Regressão bonita'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'X'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'Y'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">'--'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">3.0</span><span class="p">,</span><span class="s1">'m=</span><span class="si">{:.3f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">slope</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">3.1</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="s1">'b=</span><span class="si">{:.3f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">intercept</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'regression.png'</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<figure class="align-center" id="id13">
+<a class="reference internal image-reference" href="_images/regression.png"><img alt="A line with noisy data around it" src="_images/regression.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Os dados aleatórios plotados com o melhor ajuste linear.</span><a class="headerlink" href="#id13" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Ei, nada mal! Note que, ao definir o gráfico em código, podemos nos dar ao luxo de gastar tempo polindo sua aparência para ser muito profissional, porque só precisamos fazer essa parte uma vez. Podemos então lançar um bilhão de conjuntos de dados diferentes neste programa e não precisar gastar um segundo plotando os resultados; já fizemos isso uma vez, o computador cuida disso daqui em diante.</p>
+<div class="admonition-exercise admonition">
+<p class="admonition-title">Exercício</p>
+<p>Faça o ruído ir de -1 a 1 e veja se seu valor de <span class="math notranslate nohighlight">\(r^2\)</span> se aproxima de 1.0!</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Outra ótima ferramenta para processamento de dados é chamada <code class="docutils literal notranslate"><span class="pre">R</span></code>. Há muito debate sobre se Python é melhor do que isso. É justo dizer que Python é suficientemente bom em estatísticas para pesquisa de produção e tem a vantagem de ser muito versátil, então se você aprender, obtém estatísticas além de qualquer outra coisa que ele possa fazer, enquanto <code class="docutils literal notranslate"><span class="pre">R</span></code> é mais especializado para estatísticas apenas.</p>
+</div>
+</section>
+<section id="the-bridge-to-machine-learning">
+<span id="index-3"></span><h2>A ponte para o aprendizado de máquina<a class="headerlink" href="#the-bridge-to-machine-learning" title="Link to this heading">#</a></h2>
+<p>De carros autônomos a reconhecimento facial ao Exterminador do Futuro, o aprendizado de máquina (ML) é um tópico bastante quente. A razão pela qual se tornou tão bom é que as placas gráficas de computadores se tornaram extremamente rápidas em fazer multiplicação matriz-vetor, impulsionadas principalmente pela indústria de jogos (onde essa matemática é necessária para sombreamento à medida que os jogadores se movem). Combine isso com a função universal (capaz de mapear qualquer entrada arbitrariamente complexa para uma saída arbitrariamente complexa) que é a Rede Neural Convolucional e conjuntos de dados massivos para treiná-las (por exemplo, vastas quantidades de selfies) e você tem uma revolução do aprendizado de máquina.</p>
+<p>Uma boa maneira de colocar as mãos na massa em ML é se dedicar a alguns <a class="reference external" href="https://www.fast.ai/">cursos fast.ai</a>. Esses cursos online gratuitos são de ponta e exigem cerca de 8 horas por semana durante dois meses ou mais. O computador de todo mundo não vai ser bom para treinar em grandes conjuntos de dados (a menos que você seja um jogador), mas você pode tentar (eu consegui meu computador funcionando com eles). Melhor ainda, eles configuraram um ambiente na nuvem na Amazon Web Services onde você pode simplesmente fazer login em computadores "na nuvem" que são mais do que capazes de fazer os exercícios da aula.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Grande parte do trabalho de ML é feito através do Python, que interage com bibliotecas de peso por baixo dos panos. Essa é outra boa razão para escolher Python como primeira linguagem de programação.</p>
+</div>
+<p>Uma introdução mais simples à visão computacional (relacionada ao ML) é brincar com a biblioteca <a class="reference external" href="https://opencv.org/">OpenCV</a>. Ela tem boas ligações com Python e você pode até mesmo fazê-la funcionar em um mini-computador Raspberry Pi de $35. Já vi pessoas fazerem leitores de placas de carros, reconhecerem rostos de familiares, analisarem vídeos de experimentos para coletar dados e muitas outras coisas úteis.</p>
+<p>Um exemplo trivial (não ML) de uso é obter alguns dados de um arquivo de filme. Eu tinha um vídeo de alta velocidade de um moinho de luz e queria ver quão rápido ele estava girando analisando o vídeo <a class="footnote-reference brackets" href="#radiometer" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>. OpenCV é perfeito para isso. Descobri qual pixel eu queria observar e então extraí a intensidade versus tempo com um programa simples:</p>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="_images/radiometer-pixel.jpg"><img alt="A picture of a radiometer with a pixel right on a vane selected." src="_images/radiometer-pixel.jpg" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Descobrindo qual pixel ler.</span><a class="headerlink" href="#id14" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<a class="reference internal image-reference" href="_images/radiometer-results.png"><img alt="A graph showing a Fourier transform of the light signal." src="_images/radiometer-results.png" style="width: 95%;"/></a>
+<figcaption>
+<p><span class="caption-text">Plotando e analisando os dados de intensidade. Parece que está girando a cerca de 32 pás por segundo. Esses dispositivos, na verdade chamados de radiômetros de Crookes, eram originalmente equipamentos científicos que podiam ser combinados com um estroboscópio para medir a intensidade da luz.</span><a class="headerlink" href="#id15" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>O código (parcial) para ler isso é assim:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cv2</span>  <span class="c1"># trazer a biblioteca OpenCV</span>
+
+<span class="k">def</span> <span class="nf">measureIntensities</span><span class="p">(</span><span class="n">videoFileName</span><span class="p">,</span> <span class="n">pointOfInterest</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Encontrar a intensidade de um ponto de interesse em cada quadro"""</span>
+    <span class="n">video</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">VideoCapture</span><span class="p">(</span><span class="n">videoFileName</span><span class="p">)</span>
+    <span class="n">intensities</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">while</span> <span class="n">video</span><span class="o">.</span><span class="n">isOpened</span><span class="p">():</span>
+        <span class="n">_returnCode</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">video</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">frame</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">pixelValues</span> <span class="o">=</span> <span class="n">frame</span><span class="p">[</span><span class="n">pointOfInterest</span><span class="p">]</span>
+        <span class="n">intensities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pixelValues</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+    <span class="n">video</span><span class="o">.</span><span class="n">release</span><span class="p">()</span>
+<span class="k">return</span> <span class="n">intensities</span>
+</pre></div>
+</div>
+<p>Se você tiver vídeo de algo e quiser quantificar algum elemento dele com um computador, OpenCV é seu ingresso. Uma vez que você esteja confortável com coisas simples como esta, pode tentar reconhecimento facial e leitura de placas de carros com ele também.</p>
+</section>
+<section id="graphical-user-interfaces">
+<h2>Interfaces Gráficas de Usuário<a class="headerlink" href="#graphical-user-interfaces" title="Link to this heading">#</a></h2>
+<p>Fazer aplicativos de desktop com GUI com diálogos, botões, menus e formulários pode tornar seus programas mais acessíveis e amigáveis. A maioria das linguagens de programação possui frameworks de GUI que fazem a maior parte do trabalho árduo de criar tais interfaces. Em Python, temos Kivy, wxPython, PyQt, Tkinter, e dezenas de outros. Eu escolhi wxPython primeiro por causa de seu excelente aplicativo de demonstração que permite experimentar todos os seus centenas de widgets interativamente com código de exemplo. Kivy é legal porque pode até rodar em celulares. PyQt é especialmente polido, embora exija uma licença comercial se usado em software comercial (não que haja algo de errado com isso).</p>
+<p>Talvez o sistema de GUI mais universal e moderno seja um navegador da web, o que nos leva ao próximo tópico.</p>
+</section>
+<section id="web-applications">
+<span id="index-4"></span><h2>Aplicações Web<a class="headerlink" href="#web-applications" title="Link to this heading">#</a></h2>
+<p>Quase todas as páginas da web que você visita hoje em dia são na verdade uma aplicação web, o que significa que está executando algum programa nos bastidores e apresentando os resultados a você por meio de um navegador como Firefox ou Chrome. Quase sempre, há um banco de dados no back-end contendo as informações. Por exemplo, o Facebook é conceitualmente uma visão baseada na web dos dados do usuário armazenados em um banco de dados e regidos por regras e processos.</p>
+<p>As possibilidades com aplicativos web são quase infinitas. Negócios e serviços inimagináveis ainda a serem criados serão aplicativos web. Um inventário doméstico poderia ser um aplicativo web. O Twitter é um aplicativo web. O Reddit é um aplicativo web. Os programas que dirigem aplicativos web são escritos em muitas variedades de linguagens de programação, assim como aplicativos offline. Ao longo dos anos, no entanto, vários frameworks evoluíram que contêm peças comumente necessárias de aplicativos web, como autenticação de usuários, envio de formulários seguro e acesso seguro a bancos de dados. Começar com um framework web é uma ótima maneira de se tornar produtivo na criação de aplicativos web seguros e performáticos rapidamente. Os centenas de frameworks web disponíveis têm prós e contras distintos. Vamos destacar apenas um deles aqui.</p>
+<p>Instagram e o Washington Post estão entre os milhares de aplicativos web construídos sobre um framework web chamado <a class="reference external" href="https://www.djangoproject.com/">Django</a> ("O D é mudo"). Django é surpreendentemente agradável de usar. Tendo vindo de um background em Python, o fato de usar Python tornou ainda mais fácil para mim aprender. Passei pelo <a class="reference external" href="https://docs.djangoproject.com/en/2.1/intro/">tutorial Escrevendo seu primeiro aplicativo Django</a> e estava pronto para começar. Este foi realmente um momento emocionante para mim porque eu podia sentir minha mente se expandindo... "Tantas novas possibilidades. Eu posso fazer qualquer aplicativo web por aí com esta coisa!" É a coisa mais próxima de subir de nível que acho que já vou experimentar.</p>
+<p>Django é extremamente bem documentado e tem uma comunidade divertida e engajada. Por exemplo, <a class="reference external" href="https://djangogirls.org/">Django Girls</a> é uma organização sem fins lucrativos centrada em ensinar Django para meninas ao redor do mundo enquanto desperta interesse em programação.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Um modelo mental que é frequentemente usado nesses tipos de aplicações é o padrão "Modelo-Visualizador-Controlador" (MVC). O modelo é o banco de dados organizado de alguma forma, o visualizador é a página da web renderizada com os dados nela, e o controlador é o código executado para descobrir o que mostrar quando, e o que você pode e não pode fazer. Ao separar essas unidades, o código permanece fácil de manter. Django é projetado em torno do MVC.</p>
+</div>
+<p>A magnitude pura das capacidades que o Django e seus complementos trazem é impressionante. Uma vez que você chega ao ponto de definir modelos, muitos sistemas impressionantes são ativados automaticamente. Por exemplo, digamos que você esteja fazendo um fórum de discussão onde você criou alguns modelos que se parecem com isso:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Post</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">poster</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+    <span class="n">posted</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+    <span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Comment</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+    <span class="n">poster</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+    <span class="n">post</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Post</span><span class="p">)</span>
+    <span class="n">posted</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+    <span class="n">votes</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntField</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O painel de administração automático permitiria que você populasse o banco de dados com informações. Ele apresenta a você widgets baseados na web que são apropriados para cada tipo de dado. O <code class="docutils literal notranslate"><span class="pre">DateTimeField</span></code> tem um seletor de calendário pop-up e os <code class="docutils literal notranslate"><span class="pre">ForeignKeys</span></code> têm menus suspensos com links para outras instâncias. Você pode criar formulários personalizados para seus usuários que automaticamente obtêm esses widgets também. Você também pode usar o framework Django REST (um complemento) que configurará todo um sistema para interagir com este aplicativo de outros lugares (outros aplicativos web, programas de desktop, telefones, etc.). Em outras palavras, todas as coisas que você normalmente precisa fazer com um aplicativo web têm soluções integradas ou prontamente disponíveis.</p>
+<p>Eu simplesmente não posso enfatizar o quão capacitador isso é. Se você aprender, começará a querer automatizar todos os tipos de ineficiências ao redor do seu escritório, equipe de pesquisa, armazém, ou onde quer que as encontre. A documentação oficial não pode ser melhorada e, para começar, basta ir até lá e começar. Ter Python instalado da seção anterior é tudo o que você precisa para começar. Estou ansioso para ouvir sobre as coisas maravilhosas que você fará com esses sistemas.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Habilidades de administração de sistemas para executar um servidor web são úteis para configurar aplicativos Django de calibre de produção, embora você possa começar a construir aplicativos imediatamente usando o servidor de teste embutido que vem com o Django.</p>
+</div>
+<hr class="docutils"/>
+<p>E aí está, o superpoder definitivo do computador. As habilidades que você começou aqui podem mudar o mundo, ou simplesmente tornar sua vida um pouco melhor. Espero que você encontre alguns usos emocionantes, interessantes e úteis dessas tecnologias.</p>
+<p class="rubric">Notas de rodapé</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="ssh" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id3" role="doc-backlink">1</a><span class="fn-bracket">]</span></span>
+<p>Você pode alternativamente configurar chaves SSH para evitar digitar senhas o tempo todo. Existem muitos tutoriais sobre isso disponíveis.</p>
+</aside>
+<aside class="footnote brackets" id="radiometer" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id5" role="doc-backlink">2</a><span class="fn-bracket">]</span></span>
+<p>Há um post completo no blog sobre isso em <a class="reference external" href="https://partofthething.com/thoughts/reading-out-a-crookes-radiometer-light-mill-with-python-and-opencv/">https://partofthething.com/thoughts/reading-out-a-crookes-radiometer-light-mill-with-python-and-opencv/</a></p>
+</aside>
+<aside class="footnote brackets" id="noise" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a href="#id4" role="doc-backlink">3</a><span class="fn-bracket">]</span></span>
+<p>Para obter nosso ruído de -4 a 4, fazemos um número aleatório entre 0 e 8 e subtraímos 4 dele.</p>
+</aside>
+</aside>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="left-prev" href="05_publishing.html" title="página anterior">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">anterior</p>
+<p class="prev-next-title">Publicação</p>
+</div>
+</a>
+<a class="right-next" href="07_robotics.html" title="próxima página">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">próxima</p>
+<p class="prev-next-title">Robótica e Hardware</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Conteúdo
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tracking-changes-of-anything">Acompanhando mudanças de qualquer coisa</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-git">Usando git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fixing-something-in-a-github-repository">Corrigindo algo em um repositório GitHub</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-program">Por que programar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-languages">Linguagens de programação</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-python-programs">Escrevendo programas em Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-program-to-approximate-pi">Um programa para aproximar <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-linear-regression">Uma regressão linear</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-bridge-to-machine-learning">A ponte para o aprendizado de máquina</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphical-user-interfaces">Interfaces Gráficas de Usuário</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#web-applications">Aplicações Web</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+Por Nick Touran
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2018-2024, Nicholas W. Touran.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts carregados após <body> para que o DOM não seja bloqueado -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

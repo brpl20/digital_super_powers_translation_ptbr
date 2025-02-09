@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="pt-br">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Introdução" property="og:title"/>
+<meta content="book" property="og:type"/>
+<meta content="https://digitalsuperpowers.com/01_intro.html" property="og:url"/>
+<meta content="Digital Superpowers" property="og:site_name"/>
+<meta content="Computadores estão em toda parte. Eles estão em nossas bolsas, nossos escritórios, nossas TVs, nossos locais de hobby, nossos carros e nossas torradeiras. Muitos de nós passamos partes significativas de nossos dias operando essas máquinas nas palmas de nossas mãos e em nossas mesas ou sofás. Elas nos entretêm e nos fazem rir. Elas nos conectam a..." property="og:description"/>
+<meta content="https://digitalsuperpowers.com/book/_static/logo_w.png" property="og:image"/>
+<meta content="Digital Superpowers" property="og:image:alt"/>
+<meta content="Computadores estão em toda parte. Eles estão em nossas bolsas, nossos escritórios, nossas TVs, nossos locais de hobby, nossos carros e nossas torradeiras. Muitos de nós passamos partes significativas de nossos dias operando essas máquinas nas palmas de nossas mãos e em nossas mesas ou sofás. Elas nos entretêm e nos fazem rir. Elas nos conectam a..." name="description"/>
+<meta content="summary_large_image" property="twitter:card"/>
+<meta content="@whatisnuclear" property="twitter:creator"/>
+<meta content="2024-03-01" property="book:release_date"/>
+<title>Introdução — Documentação Digital Superpowers 2.0</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="css/theme.css" rel="stylesheet"/>
+<link href="css/bootstrap.css" rel="stylesheet"/>
+<link href="css/pydata-sphinx-theme.css" rel="stylesheet"/>
+<link href="css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="css/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="css/sphinx-book-theme.css" rel="stylesheet" type="text/css"/>
+<link href="css/graphviz.css" rel="stylesheet" type="text/css"/>
+<link href="_static/_static/css/custom.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" rel="preload"/>
+<script src="js/all.min.js"></script>
+<script src="js/documentation_options.js"></script>
+<script src="js/doctools.js"></script>
+<script src="js/sphinx_highlight.js"></script>
+<script src="js/sphinx-book-theme.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = '01_intro';</script>
+<link href="genindex.html" rel="index" title="Índice"/>
+<link href="search.html" rel="search" title="Pesquisar"/>
+<link href="02_fundamentals.html" rel="next" title="Fundamentos"/>
+<link href="index.html" rel="prev" title="Digital Superpowers"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en-us" name="docsearch:language"/>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<a class="skip-link" href="#main-content" id="pst-skip-link">Pular para o conteúdo principal</a>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>
+    Voltar ao topo
+  </button>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Pesquisar..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Pesquisar..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+</div>
+<header>
+<div class="bd-header navbar navbar-expand-lg bd-navbar">
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="https://digitalsuperpowers.com">
+<img alt="Documentação Digital Superpowers 2.0 - Início" class="logo__image only-light" src="_static/logo.png"/>
+<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Documentação Digital Superpowers 2.0 - Início"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item">
+<script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Pesquisar</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introdução</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_fundamentals.html">Fundamentos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_home.html">Em Casa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_office.html">No Escritório</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_art.html">Estúdio de Arte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_publishing.html">Publicação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_programming.html">Programação</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_robotics.html">Robótica e Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_selfhost.html">Auto-Hospedagem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_conclusion.html">Conclusão</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossário</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Alternar barra lateral primária">
+<span class="fa-solid fa-bars"></span>
+</label></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<a class="btn btn-sm btn-source-issues-button" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/partofthething/digitalsuperpowers/issues/new?title=Issue%20on%20page%20%2F01_intro.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Abrir um problema">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+</a>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Baixar esta página" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="_sources/01_intro.rst" target="_blank" title="Baixar arquivo fonte">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+<li>
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Imprimir para PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+</ul>
+</div>
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Modo tela cheia">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="claro/escuro" aria-label="claro/escuro" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Pesquisar" aria-label="Pesquisar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Alternar barra lateral secundária">
+<span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Introdução</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Conteúdo </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Público-alvo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-me">Sobre mim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophy">Filosofia</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section id="introduction">
+<h1>Introdução<a class="headerlink" href="#introduction" title="Link para este cabeçalho">#</a></h1>
+<p>Computadores estão em toda parte. Eles estão em nossas bolsas, nossos escritórios, nossas TVs, nossos locais de hobby,
+nossos carros e nossas torradeiras. Muitos de nós passamos partes significativas de nossos dias operando essas
+máquinas nas palmas de nossas mãos e em nossas mesas ou sofás. Elas nos entretêm e nos fazem rir. Elas nos conectam a
+família e nos ajudam a encontrar amor. Elas nos ajudam a escrever relatórios
+e a fazer vídeos de projetos na escola. Elas facilitam nosso trabalho ao processar números,
+formatar documentos e nos ajudar a expressar nossas ideias.
+Em certo sentido, são extensões de nossos cérebros. Mas muitos de nós poderíamos estar aproveitando mais de
+nossos computadores. Este livro mostrará como.</p>
+<p>Computadores são capazes de <em>ser</em> dezenas de
+aparelhos, gadgets e até grandes instalações. Essa amplitude esmagadora de capacidade é fácil
+de se ignorar. Eu tenho mantido uma lista:</p>
+<table class="table" id="id1">
+<caption><span class="caption-text">Várias coisas que computadores são capazes de <em>ser</em></span><a class="headerlink" href="#id1" title="Link para esta tabela">#</a></caption>
+<tbody>
+<tr class="row-odd"><td><p>TV</p></td>
+<td><p>Reprodutor de filmes</p></td>
+<td><p>Agenda telefônica</p></td>
+<td><p>Telefone</p></td>
+</tr>
+<tr class="row-even"><td><p>Mesa de desenho</p></td>
+<td><p>Diário</p></td>
+<td><p>Enciclopédia</p></td>
+<td><p>Álbum de fotos</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nintendo</p></td>
+<td><p>Máquina de escrever</p></td>
+<td><p>Calculadora</p></td>
+<td><p>Dicionário</p></td>
+</tr>
+<tr class="row-even"><td><p>Afinação musical</p></td>
+<td><p>Atlas</p></td>
+<td><p>Estúdio de áudio</p></td>
+<td><p>Jornal</p></td>
+</tr>
+<tr class="row-odd"><td><p>Laboratório fotográfico</p></td>
+<td><p>Gráfica</p></td>
+<td><p>GPS</p></td>
+<td><p>Jogo de cartas</p></td>
+</tr>
+<tr class="row-even"><td><p>Calendário</p></td>
+<td><p>Catálogo de cartões</p></td>
+<td><p>Rádio</p></td>
+<td><p>Arquivo</p></td>
+</tr>
+</tbody>
+</table>
+<p>Este livro postula que algumas capacidades poderosas dos computadores que muitas pessoas têm em
+mãos não são bem conhecidas nem fáceis de descobrir. Ter contato com algumas delas
+melhorará diretamente sua vida em casa, na escola, no trabalho e no lazer. Ver essas capacidades em ação
+deverá inspirar pensamentos sobre novas conquistas que você pode alcançar, bem como
+como fazer suas atividades atuais de maneira melhor e com mais prazer.</p>
+<section id="intended-audience">
+<h2>Público-alvo<a class="headerlink" href="#intended-audience" title="Link para este cabeçalho">#</a></h2>
+<p>Este livro é escrito com alguns leitores específicos em mente:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>O usuário comum de computador em escola, casa e escritório que quer levar isso ao próximo nível</p></li>
+<li><p>O artista em busca de ideias e orientação sobre computadores</p></li>
+<li><p>O empreendedor em busca de novas habilidades e caminhos modernos para o sucesso</p></li>
+<li><p>O cientista que sabe que o computador pode ajudar, mas não tem certeza de como começar</p></li>
+<li><p>O aposentado que deseja se manter atualizado sobre tecnologia</p></li>
+<li><p>O executivo que quer estar mais bem informado sobre ferramentas de TI</p></li>
+</ul>
+</div></blockquote>
+<p>Vamos passar por muitos exemplos práticos que você poderá seguir imediatamente.
+Mas como cada superpoder poderia ter (e provavelmente tem) vários livros escritos
+especificamente sobre ele, cada um não será tratado em
+detalhes. Portanto, você deve estar pronto e disposto a se aprofundar (às vezes significativamente) em
+qualquer coisa que discutirmos aqui quando fizer sentido para você buscar maestria. Este não é um
+tutorial aprofundado sobre um tópico, mas sim um passeio guiado por muitos para você escolher
+com base em suas necessidades e interesses.</p>
+<p>Pressuponho que você tenha um nível básico de conhecimento de informática. Idealmente, você já saberá como
+instalar um programa, copiar e colar coisas, como fazer uma apresentação de slides e algumas noções básicas em
+uma planilha. Se não souber, você ainda aproveitará algo disso, mas não espere
+que este livro ensine você todas essas coisas. Este é um livro solidamente intermediário.</p>
+<p>Cada capítulo progredirá do básico ao mais complicado em um esforço
+para cobrir o amplo escopo, e a ampla gama de experiência e interesse por aí.</p>
+</section>
+<section id="about-me">
+<h2>Sobre mim<a class="headerlink" href="#about-me" title="Link para este cabeçalho">#</a></h2>
+<p>Sou um amante de computadores desde sempre, que passou muitos anos pessoais e profissionais aprendendo
+sobre eles. Por mais que eu ame computadores, eu realmente queria trabalhar no problema de energia/clima,
+então entrei na engenharia nuclear. Convenientemente, é um campo
+que pode ser computacionalmente intenso. Então apliquei interesses em computadores para
+simular reações nucleares em cadeia. Guiado por muitos mentores ao longo dos anos, gostei de
+buscar e aprender novas ou interessantes tecnologias e, após muitos anos, me vi com um corpo de conhecimento bastante significativo em mãos.</p>
+<p>No caminho, entrei na comunicação técnica fundando <a class="reference external" href="https://whatisnuclear.com">https://whatisnuclear.com</a>.
+Disseram-me que tenho talento para explicar coisas complexas.</p>
+<p>Então, um dia, pensei: “Puxa! Muitas pessoas poderiam usar alguma ajuda para olhar mais profundamente para
+computadores em suas vidas diárias.” e então aqui estamos.</p>
+</section>
+<section id="philosophy">
+<h2>Filosofia<a class="headerlink" href="#philosophy" title="Link para este cabeçalho">#</a></h2>
+<p>Parece que os computadores diminuíram de transformadores de mundo empolgantes para guardiões monótonos da
+planilha e do vídeo de gato. As pessoas usam computadores dentro dos limites dos
+programas que têm, sem saber explorar o que mais é possível ou disponível
+para tornar suas vidas mais fáceis e melhores. Quero iluminar as possibilidades de
+computadores para ajudar as pessoas a levar vidas mais empolgantes, engajadas e gratificantes usando equipamentos que
+já têm por aí.</p>
+<p>No espírito de acessibilidade, este livro destaca muitas ferramentas gratuitas e de código aberto primeiro,
+enquanto menciona software proprietário importante quando apropriado.</p>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="left-prev" href="index.html" title="página anterior">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">anterior</p>
+<p class="prev-next-title">Digital Superpowers</p>
+</div>
+</a>
+<a class="right-next" href="02_fundamentals.html" title="próxima página">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">próxima</p>
+<p class="prev-next-title">Fundamentos</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Conteúdo
+  </div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intended-audience">Público-alvo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#about-me">Sobre mim</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#philosophy">Filosofia</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+Por Nick Touran
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2018-2024, Nicholas W. Touran.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>
