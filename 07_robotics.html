@@ -80,8 +80,8 @@
 <div class="sidebar-primary-items__start sidebar-primary__section">
 <div class="sidebar-primary-item">
 <a class="navbar-brand logo" href="https://digitalsuperpowers.com">
-<img alt="Documentação do Digital Superpowers 2.0 - Início" class="logo__image only-light" src="_static/logo.png"/>
-<script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Documentação do Digital Superpowers 2.0 - Início"/>`);</script>
+<img alt="Documentação do Digital Superpowers 2.0 - Início" class="logo__image only-light" src="/_images/logo.png"/>
+<script>document.write(`<img src="/_images/logo.png" class="logo__image only-dark" alt="Documentação do Digital Superpowers 2.0 - Início"/>`);</script>
 </a></div>
 <div class="sidebar-primary-item">
 <script>
@@ -222,7 +222,7 @@ document.write(`
 <p>Desde o início dos anos 2000, o mercado foi inundado com placas de circuito contendo uma CPU de baixa potência, alguma memória, portas de entrada/saída digitais e analógicas (para interagir com o mundo externo) e capacidades de rede. Basicamente, são mini-computadores que você pode programar com seu computador normal e depois desconectar para colocar em um robô, no seu jardim, em uma instalação de arte, e assim por diante.</p>
 <p>Um desses produtos é o <a class="reference external" href="https://www.arduino.cc/">Arduino</a>, um microcontrolador de código aberto (o design de hardware é aberto, assim como o software) que realmente iniciou a revolução dos microcontroladores baratos. Para usar, você conecta vários sensores, botões, luzes ou outros circuitos a ele e, em seguida, escreve um pequeno programa (chamado de <em>sketch</em>) no computador. Você transfere o programa via porta USB para o Arduino, onde ele é armazenado na placa e começa a ser executado. Esses sketches são geralmente escritos na linguagem de programação <code class="docutils literal notranslate"><span class="pre">C</span></code>, que é de nível mais baixo que Python (<code class="docutils literal notranslate"><span class="pre">C</span></code> é mais poderosa e rápida, mas mais difícil de ler e escrever). Começando, muitos usuários o mantêm conectado à porta USB do computador como fonte de energia e/ou para interagir com o computador enquanto executa. Para robôs e outras coisas longe do computador, uma bateria pode ser usada para energia enquanto o programa embutido é executado.</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="_images/hottub_controller.jpg"><img alt="Uma foto de um Arduino em cima de um computador em um porão antigo" src="_images/hottub_controller.jpg" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="https://digitalsuperpowers.com/book/_images/hottub_controller.jpg"><img alt="Uma foto de um Arduino em cima de um computador em um porão antigo" src="https://digitalsuperpowers.com/book/_images/hottub_controller.jpg" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">Um antigo Arduino 2009 conectado a sensores de temperatura e controladores de relé que automatizam completamente a temperatura de uma banheira antiga, permitindo que os usuários enviem mensagens de texto para ajustar a temperatura enquanto estão a caminho de casa. O computador lê os e-mails em um programa Python, lê a temperatura atual da banheira e liga ou desliga o relé do aquecedor para atingir a temperatura alvo.</span><a class="headerlink" href="#id2" title="Link para esta imagem">#</a></p>
 </figcaption>
@@ -252,7 +252,7 @@ document.write(`
 <p>O projeto não foi simples. Mary teve que fazer todo o design artístico e implementação física. Eu forneci uma lista de compras (incluindo um Raspberry Pi, luzes LED e relés), instruções sobre como configurar o Pi e conectar as luzes, e suporte de software remoto. Uma vez que Mary tinha o Pi em sua rede, eu pude conectar remotamente e adicionar o software que havia escrito para receber mensagens de uma página da web e ligar e desligar os relés de acordo.</p>
 <p>No final, o sistema tinha o seguinte esquema:</p>
 <figure class="align-center" id="id3">
-<a class="reference internal image-reference" href="_images/pulse_system.png"><img alt="Um diagrama de fluxo mostrando dados fluindo de usuários da internet para os piscas de LED" src="_images/pulse_system.png" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="_images/pulse_system_br.png"><img alt="Um diagrama de fluxo mostrando dados fluindo de usuários da internet para os piscas de LED" src="_images/pulse_system_br.png" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">As várias interconexões no backend do sistema PULSE</span><a class="headerlink" href="#id3" title="Link para esta imagem">#</a></p>
 </figcaption>
@@ -275,7 +275,7 @@ document.write(`
 </ul>
 <p>Esse último exemplo merece mais explicação…</p>
 <figure class="align-center" id="id4">
-<a class="reference internal image-reference" href="_images/esp8266.jpg"><img alt="Uma foto de um pequeno microcontrolador." src="_images/esp8266.jpg" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="https://digitalsuperpowers.com/book/_images/esp8266.jpg"><img alt="Uma foto de um pequeno microcontrolador." src="https://digitalsuperpowers.com/book/_images/esp8266.jpg" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">Um microcontrolador ESP8266 conectado a um conjunto de relés. Esta combinação permite que você faça um interruptor inteligente controlado por Wi-Fi com um orçamento muito apertado, tudo enquanto aprende muito e pavimenta o caminho para ideias ainda mais criativas no futuro.</span><a class="headerlink" href="#id4" title="Link para esta imagem">#</a></p>
 </figcaption>
@@ -285,7 +285,7 @@ document.write(`
 <h2>Um suporte de câmera rastreador de estrelas para astrofotografia<a class="headerlink" href="#a-star-tracking-camera-mount-for-astrophotography" title="Link para este cabeçalho">#</a></h2>
 <p>A Terra gira 360° a cada 24 horas, tornando difícil tirar uma fotografia de longa exposição das estrelas com o obturador aberto por mais de alguns segundos sem obter rastros. Uma solução simples é colocar a câmera em um suporte que gira na mesma velocidade exata, mas na direção oposta, cancelando a rotação e mantendo as estrelas alinhadas com a lente. Você pode comprar um suporte de câmera que faz isso, ou pode fazer um você mesmo usando seus superpoderes digitais. Um mecanismo simples é colocar duas placas juntas com uma dobradiça e ter um motor girando lentamente um parafuso para afastar as placas. Isso é chamado de mecanismo de porta de celeiro, e parece esquematicamente assim:</p>
 <figure class="align-center" id="id5">
-<a class="reference internal image-reference" href="_images/tracker_schematic.png"><img alt="Uma imagem mostrando uma configuração triangular em uma dobradiça" src="_images/tracker_schematic.png" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="_images/tracker_schematic_br.png"><img alt="Uma imagem mostrando uma configuração triangular em uma dobradiça" src="_images/tracker_schematic_br.png" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">Um esquema de um suporte de câmera rastreador de estrelas tipo porta de celeiro.</span><a class="headerlink" href="#id5" title="Link para esta imagem">#</a></p>
 </figcaption>
@@ -298,7 +298,7 @@ document.write(`
 </div>
 <p>Fotos detalhadas, código-fonte e etapas de construção para fazer este projeto exato estão disponíveis sob uma licença de código aberto em <a class="github reference external" href="https://github.com/partofthething/startracker">partofthething/startracker</a></p>
 <figure class="align-center" id="id6">
-<a class="reference internal image-reference" href="_images/startracker.jpg"><img alt="Uma foto de uma construção real do rastreador de estrelas" src="_images/startracker.jpg" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="https://digitalsuperpowers.com/book/_images/startracker.jpg"><img alt="Uma foto de uma construção real do rastreador de estrelas" src="https://digitalsuperpowers.com/book/_images/startracker.jpg" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">Uma foto de um suporte de câmera rastreador de estrelas em funcionamento.</span><a class="headerlink" href="#id6" title="Link para esta imagem">#</a></p>
 </figcaption>
@@ -309,14 +309,14 @@ document.write(`
 <p>Se você gostaria de interagir com algum hardware, mas não quer ou não precisa se incomodar com microcontroladores, pode simplesmente usar seu laptop diretamente para muitas dessas atividades. Você precisa de uma ponte para o mundo do hardware. Quando li pela primeira vez sobre o "laptop de herança" de Bunny Hwang, ao qual ele adicionou portas de Entrada/Saída de Propósito Geral (GPIO), fiquei com muita inveja e achei que era uma ótima ideia. Isso permitiria controlar relés, ler sinais, piscar luzes, ler dados de vários sensores e todas as coisas que as pessoas fazem com microcontroladores diretamente em um laptop. Acontece que você pode obter um dispositivo USB que adiciona portas GPIO a qualquer computador com bastante facilidade.</p>
 <p>O <a class="reference external" href="https://learn.adafruit.com/adafruit-ft232h-breakout/overview">Adafruit FT232H breakout</a> é um desses dispositivos. A maioria das demonstrações que você pode encontrar online sobre fazer tais coisas com um Arduino ou Raspberry Pi também provavelmente pode ser feita com uma placa como esta e software no seu computador.</p>
 <figure class="align-center" id="id7">
-<a class="reference internal image-reference" href="_images/ft232h.jpg"><img alt="Outra foto de uma pequena placa de circuito" src="_images/ft232h.jpg" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="https://digitalsuperpowers.com/book/_images/ft232h.jpg"><img alt="Outra foto de uma pequena placa de circuito" src="https://digitalsuperpowers.com/book/_images/ft232h.jpg" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">A placa FT232H breakout, um sistema GPIO de propósito geral para sua porta USB.</span><a class="headerlink" href="#id7" title="Link para esta imagem">#</a></p>
 </figcaption>
 </figure>
 <p>Por exemplo, se você tiver um nível digital simples e quiser ler os dados ao vivo para apoiar algum experimento ou outro projeto, esta placa breakout é perfeita. Um exemplo de uso seria medir e calibrar precisamente a taxa de mudança do ângulo em um rastreador de estrelas como o discutido anteriormente.</p>
 <figure class="align-center" id="id8">
-<a class="reference internal image-reference" href="_images/calibration_with_fit.png"><img alt="Um gráfico mostrando um ajuste linear aos dados medidos" src="_images/calibration_with_fit.png" style="width: 95%;"/></a>
+<a class="reference internal image-reference" href="_images/calibration_with_fit_br.png"><img alt="Um gráfico mostrando um ajuste linear aos dados medidos" src="_images/calibration_with_fit_br.png" style="width: 95%;"/></a>
 <figcaption>
 <p><span class="caption-text">Dados de nível com linha de melhor ajuste para calibrar um rastreador de estrelas. O código Python que leu esses dados e fez este gráfico está incluído no código de rastreamento de estrelas referenciado na seção anterior, na pasta <code class="docutils literal notranslate"><span class="pre">calibration</span></code>.</span><a class="headerlink" href="#id8" title="Link para esta imagem">#</a></p>
 </figcaption>
