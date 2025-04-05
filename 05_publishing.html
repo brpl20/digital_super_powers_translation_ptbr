@@ -237,8 +237,8 @@ metal ainda mais macio era derramado, resfriado e então retirado. Esse processo
 indireto foi projetado para produzir em massa muitas cópias exatas do que o cortador de punção tinha
 carvado laboriosamente.</p>
 <p>Essas peças de tipo eram organizadas em caixas, com a caixa de letras maiores colocada na
-prateleira superior do compositor e a caixa de letras menores colocada na prateleira inferior (daí as letras “maiúsculas”
-e “minúsculas”). Uma vez que numerosas cópias de cada letra em diferentes tamanhos e variantes eram
+prateleira superior do compositor e a caixa de letras menores colocada na prateleira inferior (daí as letras "maiúsculas"
+e "minúsculas"). Uma vez que numerosas cópias de cada letra em diferentes tamanhos e variantes eram
 fundidas, elas eram meticulosamente arranjadas por compositores e colocadas em uma galeria de tipos
 amarrada com corda, revisadas, colocadas na prensa, entintadas e pressionadas em muitas cópias de papel. Então havia
 a encadernação e o transporte. Uau!</p>
@@ -406,8 +406,8 @@ não.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>O <code class="docutils literal notranslate"><span class="pre">TeX</span></code> em <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> está relacionado a uma raiz grega que significa tanto arte quanto
-tecnologia. É pronunciado aproximadamente como “teck”. A parte <code class="docutils literal notranslate"><span class="pre">La</span></code> é pronunciada “lah” ou
-“lay”, você pode escolher qual prefere.</p>
+tecnologia. É pronunciado aproximadamente como "teck". A parte <code class="docutils literal notranslate"><span class="pre">La</span></code> é pronunciada "lah" ou
+"lay", você pode escolher qual prefere.</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> e tecnologias relacionadas essencialmente <em>constroem</em> documentos a partir de uma linguagem
 de texto puro descritiva, semelhante em conceito ao arquivo HTML bruto visto em <a class="reference internal" href="#rawhtml"><span class="std std-ref">Escrevendo uma página web do zero</span></a>.
@@ -616,32 +616,119 @@ por funcionar tão bem. Vamos converter aquele exemplo de <code class="docutils 
 </tr>
 </tbody>
 </table>
-<p>Em seguida, execute o seguinte na linha de comando (na mesma pasta do arquivo <code class="docutils literal notranslate"><span class="pre">mypub.tex</span></code> mencionado acima):</p> <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pandoc -s mypub.tex -t docx -o mypub.docx </pre></div> </div> <p>As opções são <code class="docutils literal notranslate"><span class="pre">-s</span></code> para fonte, <code class="docutils literal notranslate"><span class="pre">-t</span></code> para <code class="docutils literal notranslate"><span class="pre">para</span></code>, e <code class="docutils literal notranslate"><span class="pre">-o</span></code> para o nome do arquivo de saída. Abra o arquivo no Word ou LibreOffice e voilà! Incrível, não é?</p> <p>O melhor de tudo é que esses tipos de fluxos de trabalho podem ser controlados por revisão e colaborados usando <code class="docutils literal notranslate"><span class="pre">git</span></code>, sobre o qual você lerá em breve.</p> <p>Deve-se afirmar que o Microsoft Word melhorou muito ao longo dos anos em termos de numeração de seções, referências cruzadas e citações. Ele se integra a muitas ferramentas poderosas de gerenciamento de referências, como EndNote, e realmente não é tão ruim. Para o mundo centrado em dados do futuro próximo, onde a apresentação de informações deve vir de fontes diversas e se unir de forma elegante e colaborativa, as ferramentas que discutimos aqui desbloqueiam muitos superpoderes.</p> </section> </section> <section id="publishing-ebooks-and-books"> <span id="index-10"></span><h2>Publicação de eBooks<a class="headerlink" href="https://digitalsuperpowers.com/book/05_publishing.html#publishing-ebooks-and-books" title="Link para este cabeçalho">#</a></h2> <p>Os avanços na publicação desde os dias da entalhe de punções nos levaram a uma situação em que é bastante simples publicar um livro inteiro digitalmente e em formato físico. Mesmo há alguns anos, isso poderia exigir investimentos significativos para publicar um livro, enquanto agora a entrega digital custa quase nada e os serviços de impressão sob demanda imprimirão apenas tantos livros quantos forem encomendados. Você ainda precisa investir na escrita, obviamente, e talvez na capa, edição, publicidade e assim por diante.</p> <p>Publicar um livro por conta própria, em vez de contratar uma editora para fazê-lo, é uma aventura emocionante. Você mantém o controle criativo e financeiro total, mas é responsável por garantir que tudo esteja bom e por fazer a publicidade/promoção do livro. Então se você não investir <em>muito</em> em artistas, editores,
-   anúncios ou sua turnê de lançamento do livro o seu risco é baixo.
-  O ponto emocionante é que, com um computador em mãos, você tem tudo o que precisa para publicar seu primeiro livro por conta própria.</p> 
-  <p>Os leitores eletrônicos usam uma variedade de formatos, muitos dos quais são bloqueados com criptografia especial chamada Gestão de Direitos Digitais (DRM) que impede as pessoas de copiar livros de um lado para o outro. 
-    Antes de serem convertidos em um arquivo bloqueado, os manuscritos geralmente
-     passam pelo formato <code class="docutils literal notranslate"><span class="pre">ePub</span></code>, 
-     que é semelhante ao HTML e tem a vantagem sobre o formato PDF de ser <em>reflowable</em> (portanto, funciona com diferentes fontes e tamanhos de tela).</p> <p>Muitos autores escrevem manuscritos para eBooks em um processador de texto e usam serviços para convertê-los no formato <code class="docutils literal notranslate"><span class="pre">ePub</span></code> e/ou nos formatos compatíveis com DRM. Por exemplo, o <a class="reference external" href="https://kdp.amazon.com/en_US">Kindle Direct Publishing (KDP)</a> oferece ferramentas que podem converter arquivos <code class="docutils literal notranslate"><span class="pre">.docx</span></code> do MS Word no formato necessário para publicar eBooks Kindle e livros físicos impressos sob demanda. Eles automatizaram grande parte do trabalho e fornecem ótimos tutoriais e vídeos para orientar as pessoas em todas as etapas. Eles até têm uma ferramenta Criador de Capas, mas aposto que você pode fazer um ótimo trabalho por conta própria com o Inkscape para o seu primeiro livro. Se você planeja vender muitas cópias, contratar um artista profissional de capas custará entre U$ 300 e U$ 1.200. Além do KDP, o <a class="reference external" href="http://www.lulu.com/">Lulu.com</a> oferece serviços semelhantes, caso você queira explorar outras opções.</p> <p>Além desses serviços, o sistema <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> discutido anteriormente é perfeitamente capaz de criar livros físicos prontos para impressão, mas não será muito útil para colocar algo em um leitor eletrônico (PDFs geralmente ficam ruins em leitores eletrônicos especificamente porque não são reflowable). Talvez surpreendentemente, o sistema Sphinx e a linguagem de marcação leve ReStructuredText (LML) são uma combinação bastante poderosa para auto publicação. É avançado o suficiente para permitir que você adicione metadados que gerarão o livro inteiro, incluindo um índice, um sumário, referências cruzadas, notas de rodapé, imagens, hiperlinks e um glossário nos formatos <code class="docutils literal notranslate"><span class="pre">ePub</span></code> (para leitores eletrônicos), <code class="docutils literal notranslate"><span class="pre">PDF</span></code> (para impressão) e <code class="docutils literal notranslate"><span class="pre">HTML</span></code> (para a web). Depois de ter um arquivo <code class="docutils literal notranslate"><span class="pre">ePub</span></code>, a Amazon oferece algo chamado <code class="docutils literal notranslate"><span class="pre">KindleGen</span></code> no Windows, macOS e Linux que converterá para um formato <code class="docutils literal notranslate"><span class="pre">mobi</span></code> adequado para upload no Amazon/KDP.</p> <p>Por exemplo, para fazer com que um índice aponte para os números de página corretos para algumas palavras-chave, basta listá-las antes do parágrafo em que aparecem, assim:</p> <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. index:: single: Horses
-      The joy of horses
-      Horses are fine and majestic animals.
-      They have four legs and love oats.
-      </pre></div>
-      
-      </div> <p>Índices muito ricos podem ser gerados ao popular um manuscrito com esse tipo de metadados.</p> <p>Obter o formato exato não é trivial. A verificação gramatical também não é (embora você possa conferir o <code class="docutils literal notranslate"><span class="pre">LanguageTool</span></code>). Portanto, não recomendo essa abordagem a ninguém que não esteja muito interessado em "fazer tudo sozinho" e ter controle total com uma pilha de software de código aberto. É certamente possível.</p> <hr class="docutils"> <p>Este capítulo sobre publicação chega ao fim. Você aprendeu muitas maneiras novas e interessantes de divulgar a palavra escrita para o público. Espero que surja a oportunidade de você utilizar essas ferramentas.</p> <p class="rubric">Notas de rodapé</p> </section> </section>
-      
-      </article>
-      
-                  <footer class="prev-next-footer">
-      <div class="prev-next-area"> <a class="left-prev" href="https://digitalsuperpowers.com/book/04_art.html" title="página anterior"> <svg class="svg-inline--fa fa-angle-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg><!-- <i class="fa-solid fa-angle-left"></i> Font Awesome fontawesome.com --> <div class="prev-next-info"> <p class="prev-next-subtitle">anterior</p> <p class="prev-next-title">Estúdio de Arte</p> </div> </a> <a class="right-next" href="https://digitalsuperpowers.com/book/06_programming.html" title="próxima página"> <div class="prev-next-info"> <p class="prev-next-subtitle">próxima</p> <p class="prev-next-title">Programação</p> </div> <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg><!-- <i class="fa-solid fa-angle-right"></i> Font Awesome fontawesome.com --> </a> </div> </footer>
-      
-      </div>
-      
-               <footer class="bd-footer-content noprint">
-      <div class="bd-footer-content__inner container"> <div class="footer-item"> <p class="component-author"> Por Nick Touran </p> </div> <div class="footer-item"> <p class="copyright"> © Copyright 2018-2024, Nicholas W. Touran. <br> </p> </div> <div class="footer-item"> </div> <div class="footer-item"> </div> </div> </footer>
-      
-      </main>
-      </div>
-    <!-- Scripts carregados após <body> para não bloquear o DOM -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/pydata-sphinx-theme.js"></script>
+<p>Em seguida, execute o seguinte na linha de comando (na mesma pasta do arquivo <code class="docutils literal notranslate"><span class="pre">mypub.tex</span></code> mencionado acima):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pandoc -s mypub.tex -t docx -o mypub.docx
+</pre></div>
+</div>
+<p>As opções são <code class="docutils literal notranslate"><span class="pre">-s</span></code> para fonte, <code class="docutils literal notranslate"><span class="pre">-t</span></code> para <code class="docutils literal notranslate"><span class="pre">para</span></code>, e <code class="docutils literal notranslate"><span class="pre">-o</span></code> para o nome do arquivo de saída. Abra o arquivo no Word ou LibreOffice e voilà! Incrível, não é?</p>
+
+<p>O melhor de tudo é que esses tipos de fluxos de trabalho podem ser controlados por revisão e colaborados usando <code class="docutils literal notranslate"><span class="pre">git</span></code>, sobre o qual você lerá em breve.</p>
+
+<p>Deve-se afirmar que o Microsoft Word melhorou muito ao longo dos anos em termos de numeração de seções, referências cruzadas e citações. Ele se integra a muitas ferramentas poderosas de gerenciamento de referências, como EndNote, e realmente não é tão ruim. Para o mundo centrado em dados do futuro próximo, onde a apresentação de informações deve vir de fontes diversas e se unir de forma elegante e colaborativa, as ferramentas que discutimos aqui desbloqueiam muitos superpoderes.</p>
+</section>
+
+<section id="publishing-ebooks-and-books">
+<span id="index-10"></span><h2>Publicação de eBooks (e livros)<a class="headerlink" href="#publishing-ebooks-and-books" title="Link para este cabeçalho">#</a></h2>
+
+<p>Os avanços na publicação desde os dias da entalhe de punções nos levaram a uma situação em que é bastante simples publicar um livro inteiro digitalmente e em formato físico. Mesmo há alguns anos, isso poderia exigir investimentos significativos para publicar um livro, enquanto agora a entrega digital custa quase nada e os serviços de impressão sob demanda imprimirão apenas tantos livros quantos forem encomendados. Você ainda precisa investir na escrita, obviamente, e talvez na capa, edição, publicidade e assim por diante.</p>
+
+<p>Publicar um livro por conta própria, em vez de contratar uma editora para fazê-lo, é uma aventura emocionante. Você mantém o controle criativo e financeiro total, mas é responsável por garantir que tudo esteja bom e por fazer a publicidade/promoção do livro. Então se você não investir <em>muito</em> em artistas, editores, anúncios ou sua turnê de lançamento do livro o seu risco é baixo. O ponto emocionante é que, com um computador em mãos, você tem tudo o que precisa para publicar seu primeiro livro por conta própria.</p>
+
+<p>Os leitores eletrônicos usam uma variedade de formatos, muitos dos quais são bloqueados com criptografia especial chamada Gestão de Direitos Digitais (DRM) que impede as pessoas de copiar livros de um lado para o outro. Antes de serem convertidos em um arquivo bloqueado, os manuscritos geralmente passam pelo formato <code class="docutils literal notranslate"><span class="pre">ePub</span></code>, que é semelhante ao HTML e tem a vantagem sobre o formato PDF de ser <em>reflowable</em> (portanto, funciona com diferentes fontes e tamanhos de tela).</p>
+
+<p>Muitos autores escrevem manuscritos para eBooks em um processador de texto e usam serviços para convertê-los no formato <code class="docutils literal notranslate"><span class="pre">ePub</span></code> e/ou nos formatos compatíveis com DRM. Por exemplo, o <a class="reference external" href="https://kdp.amazon.com/en_US">Kindle Direct Publishing (KDP)</a> oferece ferramentas que podem converter arquivos <code class="docutils literal notranslate"><span class="pre">.docx</span></code> do MS Word no formato necessário para publicar eBooks Kindle e livros físicos impressos sob demanda. Eles automatizaram grande parte do trabalho e fornecem ótimos tutoriais e vídeos para orientar as pessoas em todas as etapas. Eles até têm uma ferramenta Criador de Capas, mas aposto que você pode fazer um ótimo trabalho por conta própria com o Inkscape para o seu primeiro livro. Se você planeja vender muitas cópias, contratar um artista profissional de capas custará entre U$ 300 e U$ 1.200. Além do KDP, o <a class="reference external" href="http://www.lulu.com/">Lulu.com</a> oferece serviços semelhantes, caso você queira explorar outras opções.</p>
+
+<p>Além desses serviços, o sistema <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> discutido anteriormente é perfeitamente capaz de criar livros físicos prontos para impressão, mas não será muito útil para colocar algo em um leitor eletrônico (PDFs geralmente ficam ruins em leitores eletrônicos especificamente porque não são reflowable). Talvez surpreendentemente, o sistema Sphinx e a linguagem de marcação leve ReStructuredText (LML) são uma combinação bastante poderosa para auto publicação. É avançado o suficiente para permitir que você adicione metadados que gerarão o livro inteiro, incluindo um índice, um sumário, referências cruzadas, notas de rodapé, imagens, hiperlinks e um glossário nos formatos <code class="docutils literal notranslate"><span class="pre">ePub</span></code> (para leitores eletrônicos), <code class="docutils literal notranslate"><span class="pre">PDF</span></code> (para impressão) e <code class="docutils literal notranslate"><span class="pre">HTML</span></code> (para a web). Depois de ter um arquivo <code class="docutils literal notranslate"><span class="pre">ePub</span></code>, a Amazon oferece algo chamado <code class="docutils literal notranslate"><span class="pre">KindleGen</span></code> no Windows, macOS e Linux que converterá para um formato <code class="docutils literal notranslate"><span class="pre">mobi</span></code> adequado para upload no Amazon/KDP.</p>
+
+<p>Por exemplo, para fazer com que um índice aponte para os números de página corretos para algumas palavras-chave, basta listá-las antes do parágrafo em que aparecem, assim:</p>
+
+<div class="highlight-none notranslate">
+    <div class="highlight">
+        <pre><span></span>.. index:: single: Horses
+The joy of horses
+Horses are fine and majestic animals.
+They have four legs and love oats.</pre>
+    </div>
+</div>
+
+<p>Índices muito ricos podem ser gerados ao popular um manuscrito com esse tipo de metadados.</p>
+
+<p>Obter o formato exato não é trivial. A verificação gramatical também não é (embora você possa conferir o <code class="docutils literal notranslate"><span class="pre">LanguageTool</span></code>). Portanto, não recomendo essa abordagem a ninguém que não esteja muito interessado em "fazer tudo sozinho" e ter controle total com uma pilha de software de código aberto. É certamente possível.</p>
+
+<hr class="docutils">
+
+<p>Este capítulo sobre publicação chega ao fim. Você aprendeu muitas maneiras novas e interessantes de divulgar a palavra escrita para o público. Espero que surja a oportunidade de você utilizar essas ferramentas.</p>
+
+<p class="rubric">Notas de rodapé</p>
+</section>
+</section>
+</section>
+</article>
+
+<footer class="prev-next-footer">
+<div class="prev-next-area">
+<a class="left-prev" href="https://digitalsuperpowers.com/book/04_art.html" title="página anterior">
+<svg class="svg-inline--fa fa-angle-left" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">anterior</p>
+<p class="prev-next-title">Estúdio de Arte</p>
+</div>
+</a>
+<a class="right-next" href="https://digitalsuperpowers.com/book/06_programming.html" title="próxima página">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">próxima</p>
+<p class="prev-next-title">Programação</p>
+</div>
+<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+</a>
+</div>
+</footer>
+</div>
+</div>
+</main>
+</div>
+
+<div class="bd-sidebar-secondary bd-toc noprint">
+<div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<svg class="svg-inline--fa fa-list" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="list" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M40 48C26.7 48 16 58.7 16 72v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V72c0-13.3-10.7-24-24-24H40zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM16 232v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V232c0-13.3-10.7-24-24-24H40c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24H88c13.3 0 24-10.7 24-24V392c0-13.3-10.7-24-24-24H40z"></path></svg>
+Contents
+</div>
+<nav class="bd-toc-nav page-toc">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-online">Publicação online</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sign-up-for-a-web-publishing-service">Inscreva-se em um serviço de publicação na web</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-your-own-web-address">Obtendo seu próprio endereço na web</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#make-your-own-web-page">Crie sua própria página na web</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#writing-a-web-page-from-scratch">Escrevendo uma página web do zero</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-content-management-system">Using a Content Management System</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#static-site-generators">Geradores de sites estáticos</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-topics">Outros Tópicos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-pdfs">Publicando PDFs</a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-latex">Introdução ao <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-latex">Como executar <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#official-latex-templates">Modelos Oficiais de <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-latex-from-a-gui">Usando <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> de um GUI (interface gráfica)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#easier-workflows-with-lightweight-markup-languages">Fluxos de trabalho mais fáceis com linguagens de marcação leves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry active"><a class="reference internal nav-link active" href="#publishing-ebooks-and-books">Publicando eBooks (e livros)</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Scripts carregados após <body> para não bloquear o DOM -->
+<script src="js/bootstrap.js"></script>
+<script src="js/pydata-sphinx-theme.js"></script>
