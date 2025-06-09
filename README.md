@@ -1,2 +1,1 @@
-- Publishing need fixing on extra sidebar created / footer error 
-- Fix the Digital Super Powers Image
+[Link]](https://brpl20.github.io/digital_super_powers_translation_ptbr/)
